@@ -1,0 +1,14 @@
+.MessageList {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    list-style-type: none;
+
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+    
+    padding-inline-start: 0;
+}

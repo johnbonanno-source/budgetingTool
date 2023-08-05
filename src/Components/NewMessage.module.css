@@ -1,0 +1,57 @@
+.form {
+    background-color: rgb(202, 158, 158);
+    max-width: 18rem;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 5px 5px 30px #353535;
+   
+    margin: auto;
+}
+
+.form label {
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.form textarea {
+    background-color: rgb(255, 229, 229);
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #353535;
+
+}
+
+input {
+    background-color: rgb(255, 229, 229);
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #353535;
+    margin-bottom: 25px;
+}
+
+.contentOrder {
+    display: grid;
+    gap: 1rem;
+}
+
+p {
+    font-size: large;
+
+}
+.doneButton{
+    background-color: rgb(108, 167, 88);
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 2px 10px #353535;
+    font: 700;
+    color: antiquewhite;
+    padding: 15px 0;
+    font-style: bold;
+    font-size: large;
+}

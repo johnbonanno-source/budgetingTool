@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
+import MainHeader from './Components/MainHeader';
+import MessageList from './Components/MessageList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [modalPosting, setModalPosting] = useState(false);
+  
+  function hideModalHandler(){
+    setModalPosting(false)
+  };
+  function showModalHandler(){
+    setModalPosting(true)
+  };
+
+  function showProfileMdalHandler(){
+    setProfileModalOpen(true)
+  };
+  function hideProfileHandler(){
+    setModalPosting(false)
+  };
+  
+  return <>
+    <MainHeader onCreatePost={showModalHandler} OnOpenProfile={ShowProfileMdalHandler}/>
+    <main>
+      <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
+    </main>
+  </>
+  
 }
 
 export default App;
