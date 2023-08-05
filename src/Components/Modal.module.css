@@ -10,7 +10,7 @@
     bottom: 0;
     position: absolute;
     opacity: 0.5;
-    background: black;
+    background: rgb(7, 70, 16);
     backdrop-filter: blur(8px);
 }
 

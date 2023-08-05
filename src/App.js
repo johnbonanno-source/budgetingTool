@@ -14,15 +14,12 @@ function App() {
     setModalPosting(true)
   };
 
-  function showProfileMdalHandler(){
-    setProfileModalOpen(true)
-  };
   function hideProfileHandler(){
     setModalPosting(false)
   };
   
   return <>
-    <MainHeader onCreatePost={showModalHandler} OnOpenProfile={ShowProfileMdalHandler}/>
+    <MainHeader/>
     <main>
       <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
     </main>

@@ -29,13 +29,22 @@ function MessageList( {isPosting, onStopPosting}) {
     ) : false}  
     {/* Profile Modal */}
     {isPosting ? (
-        <Modal onClose={onCloseProfile} >
-            <ProfileInfo></ProfileInfo> 
+        <Modal  >
         </Modal>
         ) : false}
     <ul className={classes.MessageList}>
-        <Title name={changeName} message={changeMessage}/>
-        <Title image="RyanProfile.jpg" name="John Bonanno" message="Big D with Big fire fighting chicks"/>
+        <li>
+        <div className="float: left;">
+            <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/87539ba2-07d6-4642-9788-21a631b6f4c1.png" alt="W3Schools.com"></img>    
+        </div>
+        </li>
+        <li>
+            <div className="float: left;">
+
+                <Title name={changeName} message={changeMessage}/> 
+            </div>
+        </li>
+    
     </ul>
     </>
     );
