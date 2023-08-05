@@ -4,7 +4,6 @@ import classes from './MessageList.module.css';
 import { useState } from 'react';
 import Modal from './Modal'
 import App from "../App";
-import ProfileInfo from "./ProfileInfo"
 
 function MessageList( {isPosting, onStopPosting}) {
     const [changeMessage, setChangeMessage] = useState('')
