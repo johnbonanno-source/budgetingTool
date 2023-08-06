@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+
+
 .header {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .2rem 2rem .2rem;
     justify-content: space-between;
     background-color: rgb(48, 90, 34);
     text-align: center;
     position: sticky; top: 0;
+  
     
   }
   
   .logo {
-    font-family:'Calibri', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     font-size: 3rem;
     display: flex;
     gap: 1.5rem;
@@ -23,34 +29,48 @@
     align-items: center;
     gap: 2rem;
     padding: 1.75rem 3.5rem;
-    background-color: #d1a977;
     color: #2a2630;
     border: none;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-weight: bold;
+   
   }
   
-  .button:hover {
-    background-color: #c39955;
-  }
+ 
 .viewProfile {
   display: inline-flex;
     align-items: right;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #d1a977;
-    color: #000000;
-    border: 1px solid #000000;
-    /* border-radius: 4px; */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+   
+    /* background-color: #d1a977; */
+    background-color: #fdfffd;
+    color: rgb(41, 76, 28);
+    /* border: 1px solid rgb(34, 66, 25); */
+    border: none;
+    /* border-radius: 3px; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
     font-weight: bold;
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 30px;
-padding-right: 30px;
-background-color: #fdfffd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
+.viewProfile:hover {
+  background-color: rgb(158, 193, 156);
+  color: white;
+  transition: background-color 0.3s;
+  text-decoration: underline;
+
+
+}
+.navComponentBox{
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.menuIcon{
+  font-weight: 700;
 }
