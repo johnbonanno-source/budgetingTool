@@ -2,6 +2,7 @@ import classes from "./BalanceModifier.module.css";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState } from "react";
 import App from '../App.js';
+import modifyLayout from "./BalanceModifier.module.css";
 
 const BalanceModifier = ({ balance, setBalance }) => {
 
@@ -21,14 +22,14 @@ const BalanceModifier = ({ balance, setBalance }) => {
   };
 
   return (
-    <div className={classes.modifyLayout}>
+    <div className={modifyLayout.modifyLayout}>
 
     
-      <input type="number" id={"incrementBalance"} className={classes.modify} />
-      <input type="number" id={"decrementBalance"} className={classes.modify} />
+      <input id={"incrementBalance"}  />
+      <input id={"decrementBalance"}  />
 
-      <button onClick={handleSubtractButtonClick}>Withdraw</button>
       <button onClick={handleAddButtonClick}>Deposit</button>
+      <button onClick={handleSubtractButtonClick}>Withdraw</button>
     </div>
   );
 };
