@@ -23,7 +23,7 @@
     align-items: center;
     color: white;
   }
-  
+/*   
   .button {
     display: inline-flex;
     align-items: center;
@@ -31,12 +31,13 @@
     padding: 1.75rem 3.5rem;
     color: #2a2630;
     border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: none;
+
     cursor: pointer;
     font-weight: bold;
+
    
-  }
+  } */
   
   .viewProfile:hover {
     background-color: #c39955;
@@ -44,20 +45,22 @@
 .viewProfile {
   display: inline-flex;
     align-items: right;
-    gap: 0.5rem;
-   
-    /* background-color: #d1a977; */
+    /* gap: 0.5rem;
+   */
     background-color: #fdfffd;
     color: rgb(41, 76, 28);
-    /* border: 1px solid rgb(34, 66, 25); */
+    box-shadow: none;
     border: none;
-    /* border-radius: 3px; */
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+
     font-weight: bold;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #2a2630;
+    border: none;
+    border-radius: none;
+    font-weight: bold;
 }
 
 .viewProfile:hover {
@@ -65,8 +68,6 @@
   color: white;
   transition: background-color 0.3s;
   text-decoration: underline;
-
-
 }
 .navComponentBox{
   border-radius: 10px;

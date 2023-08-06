@@ -5,13 +5,16 @@ import MainHeader from './Components/MainHeader';
 import MessageList from './Components/MessageList';
 import PageFooter from './Components/PageFooter';
 import AvailableBalance from './Components/AvailableBalance';
-import BalanceModifier from './Components/BalanceModifier'
+import BalanceModifier from './Components/BalanceModifier';
+import Login from './Components/LogIn';
 
 function App() {
 
   const [modalPosting, setModalPosting] = useState(false);
   const [balance, setBalance] = useState(10);
-  console.log("APP.JS"+balance);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+
   function hideModalHandler(){
     setModalPosting(false)
   };
@@ -23,12 +26,25 @@ function App() {
     setModalPosting(false)
   };
   
+  const divStyle = {
+    visibility: loggedIn ? 'visible' : 'hidden',
+  };
+
+  const loggedoutStyle = {
+    visibility: loggedIn ? 'hidden' : 'visible', 
+  };
+
   return <>
     <MainHeader/>
-    <AvailableBalance balance={balance} setBalance={setBalance}/>
-    <main>
-      <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
-    </main>
+    <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+    <div style={divStyle}>
+
+
+      <AvailableBalance balance={balance} setBalance={setBalance}/>
+      <main>
+        <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
+      </main>
+    </div>
       <PageFooter/>
   </>
   

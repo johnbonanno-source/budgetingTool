@@ -1,0 +1,13 @@
+.logOut{
+    background-color: rgb(158, 193, 156);
+    border: none;
+    height: 3rem;
+    
+    }
+  
+  .logOut:hover{
+    background-color: rgb(177, 175, 57);
+    color: white;
+    transition: background-color 0.3s;
+  
+  }

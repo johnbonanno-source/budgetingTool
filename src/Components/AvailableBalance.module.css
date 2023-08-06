@@ -5,11 +5,12 @@
 
   .balanceBox {
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(19, 46, 75);
+    background-color: rgb(48, 90, 34);
     margin: auto;
     width: 15rem; 
     height: 5rem;  
     margin-top: 2rem;
+ 
   }
 header{
   padding: 1rem;

@@ -11,7 +11,7 @@ function AvailableBalance({ balance,setBalance }) {
                     Current Balance: {balance}
                 </h1>
             </header>
-                <BalanceModifier balance={balance} setBalance={setBalance}/>
+            <BalanceModifier balance={balance} setBalance={setBalance}/>
         </>
     )
 }
