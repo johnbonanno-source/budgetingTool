@@ -5,7 +5,7 @@ import { BsFillEmojiSmileUpsideDownFill, BsCreditCard2Back } from "react-icons/b
 import { AiOutlineMenu } from "react-icons/ai";
 
 
-function MainHeader({ onCreatePost, OnOpenProfile }) {
+function MainHeader({ onCreatePost }) {
   return (
     <header className={classes.header}>
       <h1 className={classes.logo}>

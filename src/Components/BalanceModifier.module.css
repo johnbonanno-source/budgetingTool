@@ -1,0 +1,28 @@
+/* .modifyLayout{
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+    } */
+
+.modifySymbol {
+    gap: 1rem;
+}
+
+input{
+    background-color: rgb(196, 221, 172);
+    border-radius: none;
+    line-height: 1rem;
+}
+.modify{
+border-radius: none;
+
+}
+
+button{
+    background-color: red;
+}

@@ -1,0 +1,16 @@
+.balanceAmount {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
+
+  .balanceBox {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(19, 46, 75);
+    margin: auto;
+    width: 15rem; 
+    height: 5rem;  
+    margin-top: 2rem;
+  }
+header{
+  padding: 1rem;
+}
