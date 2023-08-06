@@ -22,11 +22,11 @@ const BalanceModifier = ({ balance, setBalance }) => {
   };
 
   return (
-    <div className={modifyLayout.modifyLayout}>
+    <div className={classes.modifyLayout}>
 
     
-      <input id={"incrementBalance"}  />
-      <input id={"decrementBalance"}  />
+      <input id={"incrementBalance"} className={classes.modify}  />
+      <input id={"decrementBalance"} className={classes.modify} />
 
       <button onClick={handleAddButtonClick}>Deposit</button>
       <button onClick={handleSubtractButtonClick}>Withdraw</button>
