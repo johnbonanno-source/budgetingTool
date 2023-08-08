@@ -24,12 +24,11 @@
   }
 
   .inputStyle {
-    width: 8rem; /* Set the width to the desired square size */
-    height: 2rem; /* Set the height to the same value as the width */
-    border: 1px solid #ccc; /* Add a border to make it visible */
-    border-radius: 5px; /* Add some border-radius to make it look nicer */
-    margin-right: 10px; /* Adjust the margin to create space between the input and the button */
+    width: 8rem; 
+    height: 2rem; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; 
     margin-top: 1.5rem;
     background-color: white;
-
   }
