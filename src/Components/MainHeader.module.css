@@ -10,8 +10,6 @@
     background-color: rgb(48, 90, 34);
     text-align: center;
     position: sticky; top: 0;
-  
-    
   }
   
   .logo {
@@ -23,30 +21,14 @@
     align-items: center;
     color: white;
   }
-/*   
-  .button {
-    display: inline-flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.75rem 3.5rem;
-    color: #2a2630;
-    border: none;
-    border-radius: none;
-
-    cursor: pointer;
-    font-weight: bold;
-
-   
-  } */
   
-  .viewProfile:hover {
+  .navButton:hover {
     background-color: #c39955;
   }
-.viewProfile {
+
+.navButton {
   display: inline-flex;
     align-items: right;
-    /* gap: 0.5rem;
-   */
     background-color: #fdfffd;
     color: rgb(41, 76, 28);
     box-shadow: none;
@@ -63,16 +45,21 @@
     font-weight: bold;
 }
 
-.viewProfile:hover {
+.navButton:hover {
   background-color: rgb(158, 193, 156);
   color: white;
   transition: background-color 0.3s;
   text-decoration: underline;
 }
-.navComponentBox{
-  border-radius: 10px;
+.navComponentBox {
+  display: flex; 
   justify-content: center;
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add some spacing between elements */
+  border-radius: 10px;
   text-align: center;
+  margin: 0px;
+  height: 2.5rem;
 }
 .menuIcon{
   font-weight: 700;

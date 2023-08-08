@@ -1,0 +1,6 @@
+.inputStyle {
+  width: 2rem; /* Set the width to the desired square size */
+  height: 2.5rem; /* Set the height to match the padding of .navButton */
+  border: 1px solid #ccc; /* Add a border to make it visible */
+  border-radius: 5px; /* Add some border-radius to make it look nicer */
+}

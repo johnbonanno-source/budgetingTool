@@ -4,7 +4,6 @@ function LoginButton({onClick,buttonText}){
 return (
     <button className={classes.logOut} onClick={onClick}>{buttonText}</button>
 )
-
 }
 
 

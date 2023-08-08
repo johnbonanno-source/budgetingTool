@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import App from '../App.js'
 import LoginButton from './LoginButton.jsx';
+import classes from './LoginButton.module.css';
+// import inputStyle from './LogIn.module.css';
 
 function Login({loggedIn,setLoggedIn}) {
 
@@ -24,24 +26,26 @@ function Login({loggedIn,setLoggedIn}) {
             {!loggedIn ? (
             <>
                 <input 
+                className={classes.inputStyle}
                 id={"username"} 
                 type="text" 
                 placeholder="Username"
                 />
 
                 <input 
+                className={classes.inputStyle}
+
                 id={"password"}  
                 type="password" 
-                placeholder="Password"/>
-
-                <LoginButton buttonText={"Login"} onClick={handleLogin}>Login</LoginButton>
+                placeholder="Password"
+                />
+                <LoginButton className={classes.logOut} buttonText={"Login"} onClick={handleLogin}>Login</LoginButton>
             </>
-            
             )
             :
             (
             <>
-                <LoginButton buttonText={"Logout"} onClick={handleLogout}>Logout</LoginButton>
+                <LoginButton className={classes.logOut} buttonText={"Logout"} onClick={handleLogout}>Logout</LoginButton>
             </>
             )
             

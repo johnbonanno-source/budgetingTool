@@ -16,12 +16,10 @@ function BalanceModifier ({ balance, setBalance }){
 
   const handleSubtractButtonClick = () => {
     let inputfield = document.getElementById("decrementBalance");
-    setBalance(balance - parseInt(inputfield.value));
-
-    // let delta = parseInt(inputfield.value);
-    // if(typeof delta === 'number' && !isNaN(delta)){
-    //   setBalance(balance + parseInt(inputfield.value));
-    // }
+    let delta = parseInt(inputfield.value);
+    if(typeof delta === 'number' && !isNaN(delta)){
+      setBalance(balance - parseInt(inputfield.value));
+    }
   };
 
   return (

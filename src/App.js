@@ -5,7 +5,6 @@ import MainHeader from './Components/MainHeader';
 import MessageList from './Components/MessageList';
 import PageFooter from './Components/PageFooter';
 import AvailableBalance from './Components/AvailableBalance';
-import BalanceModifier from './Components/BalanceModifier';
 import Login from './Components/LogIn';
 
 function App() {
@@ -35,17 +34,14 @@ function App() {
   };
 
   return <>
-    <MainHeader/>
-    <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+    <MainHeader loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+   
+
     <div style={divStyle}>
-
-
       <AvailableBalance balance={balance} setBalance={setBalance}/>
-      <main>
-        <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
-      </main>
+      <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
     </div>
-      <PageFooter/>
+    <PageFooter/>
   </>
   
 }
