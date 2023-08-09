@@ -29,9 +29,7 @@ function Login({loggedIn,setLoggedIn}) {
             // console.log(usernameValue)
 
             let url = `http://localhost:5134/Users/username/${usernameValue}`;
-                
             axios.get(url).then(response => {
-                  
                     console.log(response.data.username === usernameValue);
                     console.log(response.data.password===passwordValue)
                     if (response.data.username === usernameValue && response.data.password===passwordValue)
@@ -39,11 +37,14 @@ function Login({loggedIn,setLoggedIn}) {
                         setLoggedIn(true);
                     }
                     else{
-
                     }
-
             }).catch(error => {
-                    console.error('Error:', error);
+                const mockUserData = require('../Mocks/mockUserData.json'); // Load mock data from JSON file
+                console.error('Backend not reachable:', error);
+                const mockUser = mockUserData.find(user => user.username === usernameValue);
+                if(mockUser && mockUser.password === passwordValue){
+                    setLoggedIn(true);
+                }
             });
         }
     }
@@ -51,35 +52,37 @@ function Login({loggedIn,setLoggedIn}) {
 
     return (
         <>
-        <div>
-            {!loggedIn ? (
-            <>
-                <input 
-                className={classes.inputStyle}
-                id={"username"} 
-                type="text" 
-                placeholder="Username"
-                />
+            <div>
+                {
+                    !loggedIn ? 
+                    (
+                        <>
+                            <input 
+                            className={classes.inputStyle}
+                            id={"username"} 
+                            type="text" 
+                            placeholder="Username"
+                            />
 
-                <input 
-                className={classes.inputStyle}
+                            <input 
+                            className={classes.inputStyle}
+                            id={"password"}  
+                            type="password" 
+                            placeholder="Password"
+                            />
 
-                id={"password"}  
-                type="password" 
-                placeholder="Password"
-                />
-                <LoginButton className={classes.logOut} buttonText={"Login"} onClick={handleLogin}>Login</LoginButton>
-            </>
-            )
-            :
-            (
-            <>
-                <LoginButton className={classes.logOut} buttonText={"Logout"} onClick={handleLogout}>Logout</LoginButton>
-            </>
-            )
-            
-        }
-        </div>
+                            <LoginButton className={classes.logOut} buttonText={"Login"} onClick={handleLogin}>Login</LoginButton>
+
+                        </>
+                    )
+                    :
+                    (
+                        <>
+                            <LoginButton className={classes.logOut} buttonText={"Logout"} onClick={handleLogout}>Logout</LoginButton>
+                        </>
+                    )
+                }
+            </div>
         </>
     );     
 }

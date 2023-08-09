@@ -14,14 +14,14 @@ function App() {
 
 
   function hideModalHandler(){
-    setModalPosting(false)
+    setModalPosting(true)
   };
   function showModalHandler(){
     setModalPosting(true)
   };
 
   function hideProfileHandler(){
-    setModalPosting(false)
+    setModalPosting(true)
   };
   
   const divStyle = {
@@ -35,7 +35,7 @@ function App() {
   return <>
     <MainHeader loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
    
-
+    
     <div style={divStyle}>
       <AvailableBalance balance={balance} setBalance={setBalance}/>
       <MessageList isPosting={modalPosting}  onStopPosting={hideModalHandler} />
