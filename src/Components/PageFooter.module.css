@@ -11,6 +11,10 @@
     justify-content: center;
     text-align: center;
 }
+.footerContainer {
+    display: flex; /* Use flex display to align divs */
+    align-items: center; /* Align items vertically */
+}
 p{
     margin-block-start: 0;
     margin-block-end: 0;
@@ -25,7 +29,11 @@ p:hover{
     text-decoration: underline;
     transition: color .3s;
 }
-.footerList{
-  padding: 1rem;
+.footerList {
+    flex: 1; /* Distribute available space equally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 1rem;
 }
 

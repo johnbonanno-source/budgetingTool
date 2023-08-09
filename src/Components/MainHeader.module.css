@@ -64,3 +64,21 @@
 .menuIcon{
   font-weight: 700;
 }
+
+ul {
+  list-style: none;
+  list-style-type: none;
+  
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 39rem; 
+  height: 39rem; 
+  object-fit: contain;
+  border: 3px solid #000000;
+}
