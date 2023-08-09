@@ -1,4 +1,4 @@
-.modifyLayout{
+.balanceBox{
     display: grid;
     column-gap: 1rem;
     justify-content: center;
