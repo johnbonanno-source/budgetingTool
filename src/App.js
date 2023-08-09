@@ -5,7 +5,6 @@ import MainHeader from './Components/MainHeader';
 import MessageList from './Components/MessageList';
 import PageFooter from './Components/PageFooter';
 import AvailableBalance from './Components/AvailableBalance';
-import Login from './Components/LogIn';
 
 function App() {
 
