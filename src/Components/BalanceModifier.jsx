@@ -23,7 +23,7 @@ function BalanceModifier ({ balance, setBalance }){
   };
 
   return (
-    <div className={classes.modifyLayout}>
+    <div className={classes.balanceBox}>
       <input id={"incrementBalance"} className={classes.modifyinput}  />
       <input id={"decrementBalance"} className={classes.modifyinput} />
 
