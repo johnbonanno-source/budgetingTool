@@ -7,10 +7,6 @@ import axios from 'axios';
 
 function Login({loggedIn,setLoggedIn}) {
 
-
-    // const [password, setPassword] = useState("");
-    // const [username, setUsername] = useState("");
-
     function handleLogout() {
         setLoggedIn(false);
     };
@@ -23,10 +19,6 @@ function Login({loggedIn,setLoggedIn}) {
         if (passwordInput && usernameInput) {
           const passwordValue = passwordInput.value;
           const usernameValue = usernameInput.value;
-      
-            // setPassword(passwordValue);
-            // setUsername(usernameValue);
-            // console.log(usernameValue)
 
             let url = `http://localhost:5134/Users/username/${usernameValue}`;
             axios.get(url).then(response => {
@@ -70,9 +62,7 @@ function Login({loggedIn,setLoggedIn}) {
                             type="password" 
                             placeholder="Password"
                             />
-
                             <LoginButton className={classes.logOut} buttonText={"Login"} onClick={handleLogin}>Login</LoginButton>
-
                         </>
                     )
                     :

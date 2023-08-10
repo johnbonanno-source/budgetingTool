@@ -24,8 +24,8 @@ function BalanceModifier ({ balance, setBalance }){
 
   return (
     <div className={classes.balanceBox}>
-      <input id={"incrementBalance"} className={classes.modifyinput}  />
-      <input id={"decrementBalance"} className={classes.modifyinput} />
+      <input id={"incrementBalance"}/>
+      <input id={"decrementBalance"}/>
 
       <button className={classes.modifyButton} onClick={handleAddButtonClick}>Deposit</button>
       <button className={classes.modifyButton} onClick={handleSubtractButtonClick}>Withdraw</button>

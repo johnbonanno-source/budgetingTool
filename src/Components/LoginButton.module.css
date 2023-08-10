@@ -1,18 +1,11 @@
 .logOut{
     background-color: rgb(158, 193, 156);
-    border: none;
-    display: inline-flex;
-    align-items: right;
-    box-shadow: none;
-    border: none;
-    font-weight: bold;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     color: #2a2630;
     border: none;
-    border-radius: none;
     font-weight: bold;
     }
   
@@ -23,12 +16,4 @@
   
   }
 
-  .inputStyle {
-    width: 8rem; 
-    height: 2rem; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px; 
-    margin-top: 1.5rem;
-    background-color: white;
-  }
+  

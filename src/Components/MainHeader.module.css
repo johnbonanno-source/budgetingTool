@@ -5,11 +5,8 @@
 .header {
     display: flex;
     align-items: center;
-    padding: .2rem 2rem .2rem;
     justify-content: space-between;
     background-color: rgb(48, 90, 34);
-    text-align: center;
-    position: sticky; top: 0;
   }
   
   .logo {
@@ -27,14 +24,9 @@
   }
 
 .navButton {
-  display: inline-flex;
-    align-items: right;
+
     background-color: #fdfffd;
     color: rgb(41, 76, 28);
-    box-shadow: none;
-    border: none;
-
-    font-weight: bold;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 2rem;
@@ -53,32 +45,7 @@
 }
 .navComponentBox {
   display: flex; 
-  justify-content: center;
   align-items: center; /* Center items vertically */
-  gap: 10px; /* Add some spacing between elements */
-  border-radius: 10px;
-  text-align: center;
-  margin: 0px;
+  gap: 1rem; /* Add some spacing between elements */
   height: 2.5rem;
-}
-.menuIcon{
-  font-weight: 700;
-}
-
-ul {
-  list-style: none;
-  list-style-type: none;
-  
-  padding-inline-start: 0;
-  margin-bottom: 0;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 39rem; 
-  height: 39rem; 
-  object-fit: contain;
-  border: 3px solid #000000;
 }
