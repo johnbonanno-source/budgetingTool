@@ -24,3 +24,11 @@ Functionality that allows budgeting for recurring charges
 create static variable for available balance
 create withdraw and deposit functionality (just keep it on homepage)
 
+Hide private data
+Cookies
+unit test
+tokens for automatic logout
+React router, including fallback and 404 pages
+sign up page
+3rd party pay method such as stripe
+balance history
