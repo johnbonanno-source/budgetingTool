@@ -22,8 +22,6 @@ function Login({loggedIn,setLoggedIn}) {
 
             let url = `http://localhost:5134/Users/username/${usernameValue}`;
             axios.get(url).then(response => {
-                    console.log(response.data.username === usernameValue);
-                    console.log(response.data.password===passwordValue)
                     if (response.data.username === usernameValue && response.data.password===passwordValue)
                     {
                         setLoggedIn(true);
