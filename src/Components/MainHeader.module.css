@@ -1,55 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+
+
 .header {
-    /* padding: 2rem 10%; */
-    margin: 2rem 10%;
-    padding: 1rem;
-    text-align: center;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ece1fa;
+    justify-content: space-between;
+    background-color: rgb(48, 90, 34);
   }
   
   .logo {
-    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    color: #ece1fa;
+    color: white;
   }
   
-  .button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #d1a977;
-    color: #2a2630;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .button:hover {
+  .navButton:hover {
     background-color: #c39955;
   }
-.viewProfile {
-  display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #d1a977;
+
+.navButton {
+
+    background-color: #fdfffd;
+    color: rgb(41, 76, 28);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     color: #2a2630;
     border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    border-radius: none;
     font-weight: bold;
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 30px;
-padding-right: 30px;
-background-color: #9e77d8;
+}
 
+.navButton:hover {
+  background-color: rgb(158, 193, 156);
+  color: white;
+  transition: background-color 0.3s;
+  text-decoration: underline;
+}
+.navComponentBox {
+  display: flex; 
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Add some spacing between elements */
+  height: 2.5rem;
 }

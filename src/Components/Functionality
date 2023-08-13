@@ -1,0 +1,26 @@
+Withdrawl, deposit or tracks hardcoded information
+Line and pie chart representing spending over time
+Create user login, username and password. (use password mask)
+Create as much functionality in a single page as possible
+create pagination, routing
+    Account info
+    Settings
+
+Utilize mongoDB and MySQL for database
+Add 3rd party stripe credit info
+Homepage displays current balance
+Functionality that allows budgeting for recurring charges
+
+
+1. create a component in the top middle section of homepage that displays static available balance.
+
+2. Create withdrawl and deposit buttons/pages (preferably SPA) c
+    a.  create drop down option on available balance 
+        add modal which is opened when the withdraw/deposit button is pressed and allows the user to specify the amount
+        implement functionality to update balance on withdrawal or deposit
+
+
+  
+create static variable for available balance
+create withdraw and deposit functionality (just keep it on homepage)
+
