@@ -1,18 +1,14 @@
-import classes from './AvailableBalance.module.css';
-import BalanceModifier from './BalanceModifier.jsx'
-
-function AvailableBalance({ balance,setBalance }) {
-    return  (
-        <>
-            <header className={classes.balanceBox}>
-                <h1 className={classes.balanceAmount}>
-                    Current Balance: {balance}
-                </h1>
-            </header>
-            <BalanceModifier balance={balance} setBalance={setBalance}/>
-        </>
-    )
+import BalanceModifier from "./BalanceModifier.jsx";
+import BalanceBox from "./BalanceBox.jsx";
+function AvailableBalance({ balance, setBalance }) {
+  return (
+    <>
+      <div>
+        <BalanceBox balance={balance} />
+        <BalanceModifier balance={balance} setBalance={setBalance} />
+      </div>
+    </>
+  );
 }
 
 export default AvailableBalance;
-
