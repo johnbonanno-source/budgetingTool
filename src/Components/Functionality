@@ -32,3 +32,33 @@ React router, including fallback and 404 pages
 sign up page
 3rd party pay method such as stripe
 balance history
+
+
+
+How our code will work together and the full list of libraries that we will need:
+
+
+1. ***REACT Frontend*** will be use to only render UI. This is to be used only for visual information and should not store any crucial information including prices, passwords, balance history, etc as to avoid a privacy breach. remember that all code in react is js and is visible via dev tools/inspect. Additionally, information like tokens and cookies are browser specific which isnt ideal if a user is to switch between browsers. Additionally, react is used as an SPA. rather than reloading the page, as would happen when clicking on a link or submitting a form, react aims to just update the UI instead of reloading the page.
+    a. State management will be handled by React hooks, custom hooks, and/or redux
+    b. SPA pagination/url search updating will be done with React-router-dom and will bypass reloading the page and will include route configuration and page components
+    c. UI should be based on lean component breakdowns that are 1. reusable (navigation buttons, balance history, etc) 2. well styled with their own module.css file.
+
+2. ***Backend Server aka API***
+    a. Node.js https://nodejs.org/en 20.5.1
+    b. Express
+    c. MongoDB
+    d. REST API (Representational State Transfer) (Most Popular API)
+        1. Different URLs + Http Verbs (=endpoints [POST /post, GET /posts, GET /posts/postid]) for different actions. Http verbs below:
+            a. GET a resource from the server
+            b. POST a resource to the server (create or append)
+            c. PUT a resource onto the server (create or overwrite)
+            d. PATCH -update parts of an existing resource
+            e. DELETE a resource from the server
+
+3. ***React App <===> Backend***
+    a. Data will be exchanged between React App and Node API via JSON format
+
+Optional Extensions: (mostly for Ryan)
+    Material Icons
+    Prettier
+    Path Intellisense
