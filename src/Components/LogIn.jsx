@@ -2,49 +2,54 @@ import React, { useState } from "react";
 import LoginButton from "./LoginButton.jsx";
 import classes from "./LoginButton.module.css";
 // import inputStyle from './LogIn.module.css';
-import axios from "axios";
 
 // can we change logged in and hook to 'props'?
 const Login = (props ) => {
-  
 
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const handleLogout = () => {
-    // setLoggedIn(false);
+    props.setLoggedIn(false);
   }
 
-  const handleLogin = event => {
-    const passwordInput = document.getElementById("password");
-    const usernameInput = document.getElementById("username");
-    //setPassword(passwordInput);
-    props.setUsername(usernameInput);
-    if (passwordInput && usernameInput) {
-      const passwordValue = passwordInput.value;
-      const usernameValue = usernameInput.value;
-      // setLoggedIn(true);
+  const handleLogin = async event => {
+    event.preventDefault();
+    const success = await props.onLogin(username,password)
+    if(success){
+      props.setLoggedIn(true);
     }
-  }
+  };
+  
+    const passwordChangeHandler = event => {
+      setPassword(event.target.value);
+    };
+
+    const usernameChangeHandler = event => {
+      setUsername(event.target.value);
+    };
 
   return (
     <>
       <div>
-        {!props.loggedIn ? (
+        {!props.isLoggedIn ? (
           <>
           <form onSubmit={handleLogin}>
             <input
               className={classes.inputStyle}
               id={"username"}
               type="text"
-              value={props.username}
+              value={username}
               placeholder="Username"
-
+              onChange={usernameChangeHandler}
             />
 
             <input
               className={classes.inputStyle}
               id={"password"}
               type="password"
-              value={props.password}
+              value={password}
               placeholder="Password"
+              onChange={passwordChangeHandler}
             />
             <LoginButton
               className={classes.logOut}

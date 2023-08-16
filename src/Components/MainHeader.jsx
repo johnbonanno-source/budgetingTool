@@ -15,7 +15,7 @@ const MainHeader = (props) => {
       <div className={classes.navComponentBox}>
         <button className={classes.navButton}>Home</button>
         <button className={classes.navButton}>Budget</button>
-        <Login onLogin={props.addLoginHandler} />
+        <Login isLoggedIn={props.isLoggedIn} setLoggedIn={props.setLoggedIn} onLogin={props.onLogin} />
         <button className={classes.navButton}>
           <AiOutlineMenu className={classes.menuIcon} />
         </button>

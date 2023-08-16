@@ -6,10 +6,9 @@ import PageFooter from './Components/PageFooter';
 import AvailableBalance from './Components/AvailableBalance';
 
 function App() {
-  const [setLoggedIn,loggedIn] = useState(false);
+  const [loggedIn,setLoggedIn] = useState(false);
   const [balance, setBalance] = useState(10);
-  const [setPassword, password] = useState("");
-  const [setUsername, username] = useState("");
+  
 
   const divStyle = {
     visibility: loggedIn ? 'visible' : 'hidden',
@@ -29,23 +28,26 @@ function App() {
     visibility: loggedIn ? 'hidden' : 'visible', 
   };
 
-  const addLoginHandler = async(username)=>{
-    const credentials = {
-      username: username,
-    };
-    const response = await fetch('http://localhost:3000/login', {
+  const addLoginHandler = async(username,password)=>{
+    const response = await fetch(`http://localhost:2000/login?username=${username}`, {
       method: 'GET',
-      body: JSON.stringify(credentials),
       headers: {
         'Content-Type': 'application/json'
       }
     });
+
+    const responseData = await response.json();
+    const retrievedUsername = responseData.user.username;
+    const retrievedPassword = responseData.user.password;
+
+    if (retrievedUsername===username && retrievedPassword===password) {
+      setLoggedIn(true);
+      return true;
+    }
   }
 
-
-
   return <>
-    <MainHeader loggedIn={loggedIn} setUsername={setUsername} onLogin={addLoginHandler}/>
+    <MainHeader isLoggedIn={loggedIn} setLoggedIn={setLoggedIn} onLogin={addLoginHandler}/>
     <div style={divStyle}>
       <AvailableBalance balance={balance} setBalance={setBalance}/>
       <img
