@@ -45,7 +45,16 @@ img {
   height: 39rem; 
   object-fit: contain;
   border: 3px solid #000000;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
+
+.divStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+};
 
 @keyframes App-logo-spin {
   from {
