@@ -4,41 +4,24 @@ import classes from "./LoginButton.module.css";
 // import inputStyle from './LogIn.module.css';
 import axios from "axios";
 
-function Login({ loggedIn, setLoggedIn }) {
-  function handleLogout() {
-    setLoggedIn(false);
+// can we change logged in and hook to 'props'?
+const Login = (props ) => {
+  
+
+  const handleLogout = () => {
+    // setLoggedIn(false);
   }
 
-  function handleLogin() {
+  const handleLogin = event => {
+    console.log(e);
     const passwordInput = document.getElementById("password");
     const usernameInput = document.getElementById("username");
-
+    //setPassword(passwordInput);
+    setUsername(usernameInput);
     if (passwordInput && usernameInput) {
       const passwordValue = passwordInput.value;
       const usernameValue = usernameInput.value;
-
-      let url = `http://localhost:5134/Users/username/${usernameValue}`;
-      axios
-        .get(url)
-        .then((response) => {
-          if (
-            response.data.username === usernameValue &&
-            response.data.password === passwordValue
-          ) {
-            setLoggedIn(true);
-          } else {
-          }
-        })
-        .catch((error) => {
-          const mockUserData = require("../Mocks/mockUserData.json"); // Load mock data from JSON file
-          console.error("Backend not reachable:", error);
-          const mockUser = mockUserData.find(
-            (user) => user.username === usernameValue
-          );
-          if (mockUser && mockUser.password === passwordValue) {
-            setLoggedIn(true);
-          }
-        });
+      // setLoggedIn(true);
     }
   }
 
@@ -47,26 +30,32 @@ function Login({ loggedIn, setLoggedIn }) {
       <div>
         {!loggedIn ? (
           <>
+          <form onSubmit={handleLogin}>
             <input
               className={classes.inputStyle}
               id={"username"}
               type="text"
+              value={username}
               placeholder="Username"
+
             />
 
             <input
               className={classes.inputStyle}
               id={"password"}
               type="password"
+              value={password}
               placeholder="Password"
             />
             <LoginButton
               className={classes.logOut}
               buttonText={"Login"}
               onClick={handleLogin}
+
             >
               Login
             </LoginButton>
+          </form>
           </>
         ) : (
           <>
