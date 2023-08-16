@@ -13,13 +13,16 @@ const Login = (props ) => {
   }
 
   const handleLogin = async event => {
+    //default response to submit of form is refresh
+    //this prevents refresh for use on SPA
     event.preventDefault();
     const success = await props.onLogin(username,password)
     if(success){
       props.setLoggedIn(true);
     }
   };
-  
+   
+    // const username = Document.getElementById('inputboxname');
     const passwordChangeHandler = event => {
       setPassword(event.target.value);
     };
@@ -42,7 +45,6 @@ const Login = (props ) => {
               placeholder="Username"
               onChange={usernameChangeHandler}
             />
-
             <input
               className={classes.inputStyle}
               id={"password"}
