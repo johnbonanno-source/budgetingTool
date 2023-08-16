@@ -6,7 +6,7 @@ import PageFooter from './Components/PageFooter';
 import AvailableBalance from './Components/AvailableBalance';
 
 function App() {
-
+  const [setLoggedIn,loggedIn] = useState(false);
   const [balance, setBalance] = useState(10);
   const [setPassword, password] = useState("");
   const [setUsername, username] = useState("");
@@ -45,7 +45,7 @@ function App() {
 
 
   return <>
-    <MainHeader setUsername={setUsername} onLogin={addLoginHandler}/>
+    <MainHeader loggedIn={loggedIn} setUsername={setUsername} onLogin={addLoginHandler}/>
     <div style={divStyle}>
       <AvailableBalance balance={balance} setBalance={setBalance}/>
       <img

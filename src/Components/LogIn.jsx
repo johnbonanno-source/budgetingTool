@@ -13,11 +13,10 @@ const Login = (props ) => {
   }
 
   const handleLogin = event => {
-    console.log(e);
     const passwordInput = document.getElementById("password");
     const usernameInput = document.getElementById("username");
     //setPassword(passwordInput);
-    setUsername(usernameInput);
+    props.setUsername(usernameInput);
     if (passwordInput && usernameInput) {
       const passwordValue = passwordInput.value;
       const usernameValue = usernameInput.value;
@@ -28,14 +27,14 @@ const Login = (props ) => {
   return (
     <>
       <div>
-        {!loggedIn ? (
+        {!props.loggedIn ? (
           <>
           <form onSubmit={handleLogin}>
             <input
               className={classes.inputStyle}
               id={"username"}
               type="text"
-              value={username}
+              value={props.username}
               placeholder="Username"
 
             />
@@ -44,14 +43,12 @@ const Login = (props ) => {
               className={classes.inputStyle}
               id={"password"}
               type="password"
-              value={password}
+              value={props.password}
               placeholder="Password"
             />
             <LoginButton
               className={classes.logOut}
               buttonText={"Login"}
-              onClick={handleLogin}
-
             >
               Login
             </LoginButton>
