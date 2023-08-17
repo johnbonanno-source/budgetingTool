@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./Login.module.css";
 import addLoginHandler from "../../Api/LoginHandler.js";
 
-const Login = (props) => {
+const Login = ({ isLoggedIn, setLoggedIn }) => {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -20,26 +20,26 @@ const Login = (props) => {
       credentials.password
     );
     if (success) {
-      props.setLoggedIn(true);
+      setLoggedIn(true);
     }
   };
 
   const handleLogout = () => {
-    props.setLoggedIn(false);
+    setLoggedIn(false);
   };
 
   const renderLoginButton = () => (
     <button
       className={classes.logOut}
-      onClick={props.isLoggedIn ? handleLogout : handleLoginAndLogout}
+      onClick={isLoggedIn ? handleLogout : handleLoginAndLogout}
     >
-      {props.isLoggedIn ? "Logout" : "Login"}
+      {isLoggedIn ? "Logout" : "Login"}
     </button>
   );
 
   return (
     <div>
-      {props.isLoggedIn ? (
+      {isLoggedIn ? (
         <>{renderLoginButton()} </>
       ) : (
         <form onSubmit={handleLoginAndLogout}>

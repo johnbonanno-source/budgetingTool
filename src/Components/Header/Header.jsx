@@ -15,11 +15,7 @@ const Header = (props) => {
       <div className={classes.navComponentBox}>
         <button className={classes.navButton}>Home</button>
         <button className={classes.navButton}>Budget</button>
-        <Login
-          isLoggedIn={props.isLoggedIn}
-          setLoggedIn={props.setLoggedIn}
-          onLogin={props.onLogin}
-        />
+        <Login props={props} />
         <button className={classes.navButton}>
           <AiOutlineMenu className={classes.menuIcon} />
         </button>
