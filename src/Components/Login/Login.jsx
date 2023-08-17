@@ -15,11 +15,11 @@ const Login = ({ isLoggedIn, setLoggedIn }) => {
 
   const handleLoginAndLogout = async (event) => {
     event.preventDefault();
-    const success = await addLoginHandler(
+    const token = await addLoginHandler(
       credentials.username,
       credentials.password
     );
-    if (success) {
+    if (token) {
       setLoggedIn(true);
     }
   };

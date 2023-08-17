@@ -1,29 +1,30 @@
 const addLoginHandler = async (username, password) => {
-  return true;
-  // const response = await fetch(
-  //   `http://localhost:2000/login`,
-  //   {
-  //     method: "POST",
-  //     body:{
-  //         username : `${username}`,
-  //         password : `${password}`
-  //     },
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   }
-  // );
+  try {
+    const response = await fetch(
+      "http://localhost:2001/login",
+      {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
-  // const responseData = await response.json();
-  // const retrievedUsername = responseData.user.username;
-  // const retrievedPassword = responseData.user.password;
+    if (!response.ok) {
+      throw new Error("Login failed");
+      
+    }
 
-  // if (retrievedUsername === username && retrievedPassword === password) {
-  //   return true;
-  // }
-  // else{
-  //   return true;
-  // }
+    const responseData = await response.json();
+    const token = responseData.token; 
+
+    console.log("Logged in successfully. Token:", token);
+    return token;
+  } catch (error) {
+    console.error("Login error:", error.message);
+  }
 };
+
 
 export default addLoginHandler;
