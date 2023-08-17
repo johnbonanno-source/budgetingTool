@@ -3,7 +3,6 @@ import classes from "./Login.module.css";
 import addLoginHandler from "../../Api/LoginHandler.js";
 
 const Login = (props) => {
-
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -30,7 +29,10 @@ const Login = (props) => {
   };
 
   const renderLoginButton = () => (
-    <button className={classes.logOut} onClick={props.isLoggedIn ? handleLogout : handleLoginAndLogout}>
+    <button
+      className={classes.logOut}
+      onClick={props.isLoggedIn ? handleLogout : handleLoginAndLogout}
+    >
       {props.isLoggedIn ? "Logout" : "Login"}
     </button>
   );

@@ -1,19 +1,16 @@
-.logOut{
-    background-color: rgb(158, 193, 156);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: #2a2630;
-    border: none;
-    font-weight: bold;
-    }
-  
-  .logOut:hover{
-    background-color: rgb(177, 175, 57);
-    color: white;
-    transition: background-color 0.3s;
-  
-  }
+.logOut {
+  background-color: rgb(158, 193, 156);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #2a2630;
+  border: none;
+  font-weight: bold;
+}
 
-  
+.logOut:hover {
+  background-color: rgb(177, 175, 57);
+  color: white;
+  transition: background-color 0.3s;
+}
