@@ -1,10 +1,7 @@
 import classes from "./Header.module.css";
-import {
-  BsFillEmojiSmileUpsideDownFill,
-  BsCreditCard2Back,
-} from "react-icons/bs";
+import {BsFillEmojiSmileUpsideDownFill, BsCreditCard2Back} from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-import Login from "./LogIn";
+import Login from "../Login/Login";
 
 const Header = (props) => {
   return (

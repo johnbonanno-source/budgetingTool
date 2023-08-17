@@ -1,40 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(48, 90, 34);
-  }
-  
-  .logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    color: white;
-  }
-  
-  .navButton:hover {
-    background-color: #c39955;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(48, 90, 34);
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  color: white;
+}
+
+.navButton:hover {
+  background-color: #c39955;
+}
 
 .navButton {
-
-    background-color: #fdfffd;
-    color: rgb(41, 76, 28);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: #2a2630;
-    border: none;
-    border-radius: none;
-    font-weight: bold;
+  background-color: #fdfffd;
+  color: rgb(41, 76, 28);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #2a2630;
+  border: none;
+  border-radius: none;
+  font-weight: bold;
 }
 
 .navButton:hover {
@@ -44,7 +42,7 @@
   text-decoration: underline;
 }
 .navComponentBox {
-  display: flex; 
+  display: flex;
   align-items: center; /* Center items vertically */
   gap: 1rem; /* Add some spacing between elements */
   height: 2.5rem;

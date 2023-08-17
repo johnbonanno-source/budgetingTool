@@ -10,6 +10,9 @@
     font-size: small;
     justify-content: center;
     text-align: center;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
 }
 .footerContainer {
     display: flex; /* Use flex display to align divs */
