@@ -1,4 +1,4 @@
-import classes from "./PageFooter.module.css";
+import classes from "./Footer.module.css";
 
 function PageFooter() {
   return (

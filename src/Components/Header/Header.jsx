@@ -1,4 +1,4 @@
-import classes from "./MainHeader.module.css";
+import classes from "./Header.module.css";
 import {
   BsFillEmojiSmileUpsideDownFill,
   BsCreditCard2Back,
@@ -6,7 +6,7 @@ import {
 import { AiOutlineMenu } from "react-icons/ai";
 import Login from "./LogIn";
 
-const MainHeader = (props) => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <h1 className={classes.logo}>
@@ -24,4 +24,4 @@ const MainHeader = (props) => {
   );
 }
 
-export default MainHeader;
+export default Header;

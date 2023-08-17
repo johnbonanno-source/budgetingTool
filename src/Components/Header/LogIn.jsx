@@ -8,6 +8,7 @@ const Login = (props ) => {
 
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  
   const handleLogout = () => {
     props.setLoggedIn(false);
   }
