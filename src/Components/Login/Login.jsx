@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import classes from "./Login.module.css";
 import addLoginHandler from "../../Api/LoginHandler.js";
+import { Link } from "react-router-dom";
 
-const Login = ({ isLoggedIn, setLoggedIn }) => {
+const Login = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -29,12 +32,12 @@ const Login = ({ isLoggedIn, setLoggedIn }) => {
   };
 
   const renderLoginButton = () => (
-    <button
+    <Link
       className={classes.logOut}
       onClick={isLoggedIn ? handleLogout : handleLoginAndLogout}
     >
       {isLoggedIn ? "Logout" : "Login"}
-    </button>
+    </Link>
   );
 
   return (

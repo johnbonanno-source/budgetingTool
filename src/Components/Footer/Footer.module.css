@@ -13,10 +13,11 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding-top: 1rem;
 }
 .footerContainer {
-  display: flex; /* Use flex display to align divs */
-  align-items: center; /* Align items vertically */
+  display: flex; 
+  align-items: center; 
 }
 p {
   margin-block-start: 0;
@@ -33,9 +34,15 @@ p:hover {
   transition: color 0.3s;
 }
 .footerList {
-  flex: 1; /* Distribute available space equally */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  padding: 1rem;
+  align-items: center; 
+}
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  /* position: static; */
+
 }
