@@ -3,15 +3,15 @@ import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 
 const RootLayout = () => {
-    return (
+  return (
     <>
+      <div>
         <Header />
-        <main>
-            <Outlet/>
-        </main>
-        <Footer/>
+        <Outlet />
+        <Footer />
+      </div>
     </>
-    )
-}
+  );
+};
 
 export default RootLayout;

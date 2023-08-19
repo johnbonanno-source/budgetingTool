@@ -3,24 +3,23 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className={classes.container}>
       <footer className={classes.pageFooter}>
         <div className={classes.footerContainer}>
           <div className={classes.footerList}>
-            <p><Link>Employment</Link></p>
-            <p>Contact</p>
-            <p>rug Abuse</p>
-            <p>Womanizer</p>
+            <Link className={classes.linkStyle}>Employment</Link>
+            <Link className={classes.linkStyle}>Contact</Link>
+            <Link className={classes.linkStyle}>rug Abuse</Link>
+            <Link className={classes.linkStyle}>Womanizer</Link>
           </div>
-          <div className={classes.footerList}>
-            <p>Employment</p>
-            <p>Contact</p>
-            <p>rug Abuse</p>
-            <p>Womanizer</p>
-          </div>
+          {/* <div className={classes.footerList}>
+          <Link>Employment</Link>
+          <Link>Contact</Link>
+          <Link>rug Abuse</Link>
+          <Link>womanizer</Link>
+          </div> */}
         </div>
       </footer>
-    </div>
+    
   );
 }
 

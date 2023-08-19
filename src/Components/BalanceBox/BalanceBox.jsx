@@ -1,5 +1,5 @@
 import classes from "./BalanceBox.module.css";
-
+import { Link } from "react-router-dom";
 function BalanceBox({ balance, setBalance }) {
   const handleAddButtonClick = () => {
     let inputfield = document.getElementById("incrementBalance");

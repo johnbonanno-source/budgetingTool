@@ -1,6 +1,9 @@
+@import 'normalize.css'; 
+
 .divStyle {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: center; 
+  background-color: #C5D8D1;
+  height: 78.5vh;
 }

@@ -1,48 +1,36 @@
+@import 'normalize.css'; 
+.balanceAmount {
+  font-family: "Raleway", sans-serif;
+  color: #F4EDEA;
+  
+}
 .balanceBox {
   display: grid;
-  column-gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-  grid-template-columns: 1fr 1fr;
-  width: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.modifyinput {
-  background-color: white;
-  box-shadow: none;
-  border-color: rgb(134, 134, 134);
-  border-style: groove;
-  border-width: 0.2rem;
-  width: 7.4rem;
-  margin-bottom: 0.4rem;
+  grid-template-columns: 0fr 0fr;
 }
 
 .modifyButton {
-  background-color: rgb(62, 161, 70);
+  background-color: #F4EDEA;
   border: none;
   border-radius: 4px;
   width: 75px;
   line-height: 30px;
   margin: auto;
+  color: #06BCC1;
 }
 
 .modifyButton:hover {
-  background-color: rgb(31, 83, 28);
-  color: white;
+  background-color:#06BCC1;
+  color: #F4EDEA;
   transition: background-color 0.2s;
 }
 
-.balanceAmount {
-  font-family: "Raleway", sans-serif;
-  color: white;
-}
 
 .greenBackgroundBox {
+  margin-top: 1rem;
   font-family: "Raleway", sans-serif;
-  background-color: rgb(48, 90, 34);
-  width: 15rem;
+  background-color: #12263A;
+  width: 12rem;
   height: 5rem;
-  margin-top: 2rem;
+  justify-content: center;
 }
