@@ -27,7 +27,7 @@ const Login = () => {
     );
     if (token) {
       setLoggedIn(true);
-      navigate("/");
+      navigate("/home");
     }
   };
 
