@@ -7,6 +7,9 @@
 .balanceBox {
   display: grid;
   grid-template-columns: 0fr 0fr;
+  justify-content: center;
+
+  
 }
 
 .modifyButton {
@@ -16,21 +19,37 @@
   width: 75px;
   line-height: 30px;
   margin: auto;
-  color: #06BCC1;
+  color: #02393B;
+  border: .1rem solid #02393B; 
+
 }
 
 .modifyButton:hover {
-  background-color:#06BCC1;
+   background-color:#02393B;
   color: #F4EDEA;
   transition: background-color 0.2s;
+  border: .1rem solid #905214; 
+
 }
 
 
-.greenBackgroundBox {
+.balanceBackgroundBox {
+  
   margin-top: 1rem;
   font-family: "Raleway", sans-serif;
-  background-color: #12263A;
+  background-color: #02393B;
   width: 12rem;
   height: 5rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.balanceBoxContainer{
+  margin-top: 1rem;
+  font-family: "Raleway", sans-serif;
+  border:none;
+  width: 100%;
+  height: 40rem;
   justify-content: center;
 }

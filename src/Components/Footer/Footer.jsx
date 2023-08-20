@@ -11,12 +11,7 @@ function Footer() {
             <Link className={classes.linkStyle}>rug Abuse</Link>
             <Link className={classes.linkStyle}>Womanizer</Link>
           </div>
-          {/* <div className={classes.footerList}>
-          <Link>Employment</Link>
-          <Link>Contact</Link>
-          <Link>rug Abuse</Link>
-          <Link>womanizer</Link>
-          </div> */}
+          
         </div>
       </footer>
     
