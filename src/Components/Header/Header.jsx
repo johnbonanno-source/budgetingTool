@@ -8,11 +8,11 @@ import {
 import { AiOutlineMenu } from "react-icons/ai";
 import Login from "../Login/Login";
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setLoggedIn] = useOutletContext();
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleLogout = () => {
     setLoggedIn(false);
