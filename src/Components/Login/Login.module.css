@@ -1,25 +1,27 @@
 @import 'normalize.css'; 
 .logOut {
-  background-color: #C5D8D1;
-  color: #2a2630;
+  background-color:#02393B;
+  color:   #F4EDEA;
+
 
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  
   height: 1.1rem;
-
+  width: 5rem;
   border-radius: 4px;
   justify-content: center;
   display: flex;
   align-items: center; 
   justify-content: center;
   margin-bottom:2rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .logOut:hover {
-  background-color:#12263A;
+  background-color:#02393B;
   color: #F4EDEA;
   border-radius: 4px;
   height: 1.1rem;
@@ -36,4 +38,23 @@
   width: 100%;
   height: 40rem;
   justify-content: center;
+}
+
+.logininput {
+  margin-bottom: 25px;
+  width: 12rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  height: .1rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 1.5rem;
+  background-color: #F4EDEA;
+  justify-content: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-left: auto;
+  margin-right:auto;
 }

@@ -6,8 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
 const Login = () => {
+  
   const navigate = useNavigate();
+
   const [isLoggedIn, setLoggedIn] = useOutletContext();
+
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -31,42 +34,34 @@ const Login = () => {
     }
   };
 
-  // const renderLoginButton = () => (
-  //   <>
-  //   <Link
-  //     className={classes.logOut}
-  //     onClick={isLoggedIn ? handleLogout : handleLoginAndLogout}
-  //   >
-  //     {isLoggedIn ? "Logout" : "Login"}
-  //   </Link>
-  //   </>
-  // );
-
   return (
     <>
-      <form onSubmit={handleLogin}>
-        <input
-          className={classes.inputStyle}
-          id="username"
-          type="text"
-          value={credentials.username}
-          placeholder="Username"
-          name="username"
-          onChange={handleChange}
-        />
-        <input
-          className={classes.inputStyle}
-          id="password"
-          type="password"
-          value={credentials.password}
-          placeholder="Password"
-          name="password"
-          onChange={handleChange}
-        />
-        <Link type="submit" className={classes.logOut} onClick={handleLogin}>
-          Login
-        </Link>
-      </form>
+      <div>
+        <form onSubmit={handleLogin}>
+          <input
+            className={classes.logininput}
+            id="username"
+            type="text"
+            value={credentials.username}
+            placeholder="Username"
+            name="username"
+            onChange={handleChange}
+          />
+          <input
+            className={classes.logininput}
+            id="password"
+            type="password"
+            value={credentials.password}
+            placeholder="Password"
+            name="password"
+            onChange={handleChange}
+          />
+          <Link type="submit" className={classes.logOut} onClick={handleLogin}>
+            Login
+          </Link>
+          <Link to="/">Forgot Password</Link>
+        </form>
+      </div>
     </>
   );
 };
