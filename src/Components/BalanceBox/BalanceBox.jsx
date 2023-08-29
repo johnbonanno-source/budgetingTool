@@ -1,21 +1,14 @@
 import classes from "./BalanceBox.module.css";
 import { useState } from "react";
 function BalanceBox() {
+  
   const [balance, setBalance] = useState(10);
-
-  const handleAddButtonClick = () => {
-    let inputfield = document.getElementById("incrementBalance");
-    let delta = parseInt(inputfield.value);
+  const handleButtonClick = (event) => {
+    const buttonName = event.target.name;
+    const inputField = document.getElementById(buttonName === "deposit" ? "incrementBalance" : "decrementBalance");
+    const delta = parseInt(inputField.value);
     if (typeof delta === "number" && !isNaN(delta)) {
-      setBalance(balance + parseInt(inputfield.value));
-    }
-  };
-
-  const handleSubtractButtonClick = () => {
-    let inputfield = document.getElementById("decrementBalance");
-    let delta = parseInt(inputfield.value);
-    if (typeof delta === "number" && !isNaN(delta)) {
-      setBalance(balance - parseInt(inputfield.value));
+      setBalance(buttonName === "deposit" ? balance + delta : balance - delta);
     }
   };
 
@@ -26,8 +19,8 @@ function BalanceBox() {
           <div className={classes.balanceBox}>
             <input id={"incrementBalance"} />
             <input id={"decrementBalance"} />
-            <button onClick={handleAddButtonClick}>Deposit</button>
-            <button onClick={handleSubtractButtonClick}>Withdraw</button>
+            <button name="deposit" onClick={handleButtonClick}>Deposit</button>
+            <button name="withdraw" onClick={handleButtonClick}>Withdraw</button>
           </div>
         </div>
 

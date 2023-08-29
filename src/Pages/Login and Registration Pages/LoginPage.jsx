@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./LoginPage.module.css";
 import addLoginHandler from "../../Api/LoginApi";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useOutletContext } from "react-router-dom";
 import LCC from "../../Assets/LCC.jpg";
 
 import Wrapper from "../../Components/Wrapper/Wrapper";
@@ -11,8 +10,13 @@ import Wrapper from "../../Components/Wrapper/Wrapper";
 const LoginPage = () => {
   const navigate = useNavigate();
 
-  const [isLoggedIn, setLoggedIn] = useOutletContext();
-  const [cookies, setCookie] = useOutletContext();
+  const tokenPrecheck = localStorage.getItem("accesstoken");
+  useEffect(() => {
+    if (tokenPrecheck) {
+      console.log("already logged in!");
+      navigate("/home");
+    }
+  }, []);
 
   const [credentials, setCredentials] = useState({
     username: "",
@@ -25,22 +29,13 @@ const LoginPage = () => {
   };
 
   const handleLogin = async (event) => {
-    console.log("HandleLoginCalled");
     event.preventDefault();
     const token = await addLoginHandler(
       credentials.username,
       credentials.password
     );
     if (token) {
-      setLoggedIn(true);
-      console.log("settingCookie", token);
       localStorage.setItem("accesstoken", token);
-      // setCookie('Username', credentials.username, {path: '/'});
-      // setCookie('Password', credentials.username, {path: '/'});
-      // use(cookieParser());
-      // cookie('auth-token',token);
-
-      // console.log(cookies.username);
       navigate("/home");
     }
   };
@@ -49,7 +44,6 @@ const LoginPage = () => {
     <>
       <Wrapper>
         <img src={LCC} alt="pic" />
-
         <div className={classes.loginBoxStyles}>
           <h4>Login</h4>
           <form onSubmit={handleLogin}>
@@ -79,11 +73,7 @@ const LoginPage = () => {
               Login
             </button>
           </form>
-          <Link
-            onClick={console.log("pressed")}
-            to="/register"
-            className={classes.linkStyle}
-          >
+          <Link to="/register" className={classes.linkStyle}>
             Sign Up
           </Link>
         </div>
