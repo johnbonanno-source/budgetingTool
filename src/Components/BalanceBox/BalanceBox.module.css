@@ -14,43 +14,26 @@
 }
 
 
-.balanceBoxInput {
-  margin-bottom: 25px;
-  width: 8rem;
-  border: 1px solid #ccc;
-  border-radius: 0.2rem;
-  margin-bottom: 0.5rem;
-  height: 1.1rem;
-  padding: 0 0 0 ;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 0.5rem;
-  background-color: #f4edea;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .modifyButton {
-  background-color: #12263A;
-  border: none;
+  
+  /* border: none;
   border-radius: 4px;
-  width: 4rem;
+  width: 10rem;
   line-height: 10px;
   margin: auto;
   color: #F4EDEA;
   border: .1rem solid #02393B; 
-
+  padding-left: 2rem; */
 
 }
 
 .modifyButton:hover {
-   background-color:#02393B;
+   /* background-color:#02393B;
   color: #F4EDEA;
   transition: background-color 0.2s;
   border: .1rem solid #F4EDEA;
+  width: 4rem; */
 
 }
 
@@ -77,13 +60,14 @@
 }
 
 .balanceBoxTwoToneContainer{
-  max-width: 20rem;
+  max-width: 40rem;
 
   width: 50%;
   height: 6rem;
   padding-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1rem;
   background-color: #dde4e5;
   border-radius: 4px;
 
@@ -94,10 +78,10 @@
 
 .balanceBoxInput {
   margin-bottom: 25px;
-  width: 6rem;
+  width: 90%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  max-width: 6rem;
+  max-width: 20rem;
   height: 1.1rem;
   margin-right: 10px;
   margin-left: 10px;

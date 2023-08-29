@@ -2,7 +2,7 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Login/RegisterPage";
 import classes from "./LoginPage.module.css";
 
-const loginPage = () => {
+const registrationPage = () => {
   
 
   return (
@@ -12,11 +12,11 @@ const loginPage = () => {
       </div>
       <div className={classes.loginBoxContainer}>
         <div className={classes.loginBoxStyles}>
-          <Login />
+          <Register/>
         </div>
       </div>
     </>
   );
 };
 
-export default loginPage;
+export default registrationPage;

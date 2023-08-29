@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
 const Login = () => {
-  
   const navigate = useNavigate();
 
   const [isLoggedIn, setLoggedIn] = useOutletContext();
+  const [cookies, setCookie] = useOutletContext();
 
   const [credentials, setCredentials] = useState({
     username: "",
@@ -30,6 +30,14 @@ const Login = () => {
     );
     if (token) {
       setLoggedIn(true);
+      console.log("settingCookie", token);
+      localStorage.setItem("accesstoken", token);
+      // setCookie('Username', credentials.username, {path: '/'});
+      // setCookie('Password', credentials.username, {path: '/'});
+      // use(cookieParser());
+      // cookie('auth-token',token);
+
+      // console.log(cookies.username);
       navigate("/home");
     }
   };
@@ -37,6 +45,7 @@ const Login = () => {
   return (
     <>
       <div>
+        <h4>Login</h4>
         <form onSubmit={handleLogin}>
           <input
             className={classes.logininput}
@@ -56,11 +65,17 @@ const Login = () => {
             name="password"
             onChange={handleChange}
           />
-          <Link type="submit" className={classes.logOut} onClick={handleLogin}>
+          <button
+            type="submit"
+            className={classes.loginBtn}
+            onClick={handleLogin}
+          >
             Login
-          </Link>
-          <Link to="/">Forgot Password</Link>
+          </button>
         </form>
+        <Link onClick={console.log("pressed")} to="/register">
+          Sign Up
+        </Link>
       </div>
     </>
   );

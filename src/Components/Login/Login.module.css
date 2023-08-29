@@ -1,33 +1,31 @@
 @import 'normalize.css'; 
-.logOut {
+.loginBtn {
   background-color:#02393B;
   color:   #F4EDEA;
 
 
-  padding-top: 1rem;
+  /* padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
-  padding-right: 2rem;
-  height: 1.1rem;
-  width: 5rem;
+  padding-right: 2rem; */
+  height: 1rem;
+  width: 100%;
   border-radius: 4px;
   justify-content: center;
   display: flex;
   align-items: center; 
   justify-content: center;
-  margin-bottom:2rem;
+  margin-bottom:1rem;
   margin-right: auto;
   margin-left: auto;
+  font-size: small;
+  padding: 0;
 }
 
-.logOut:hover {
-  background-color:#02393B;
-  color: #F4EDEA;
-  border-radius: 4px;
-  height: 1.1rem;
-  transition: background-color 0.3s;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.loginBtn:hover {
+ 
+  height: 1rem;
+
 }
 
 .loginBoxContainer{
@@ -45,8 +43,7 @@
   width: 12rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  
-  height: .1rem;
+  height: 1rem;
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 1.5rem;

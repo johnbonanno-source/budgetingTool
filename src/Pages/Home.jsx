@@ -9,7 +9,6 @@ const HomePage = () => {
       <div>
         <div className={classes.divStyle}>
           <BalanceBox balance={balance} setBalance={setBalance} />
-          
         </div>
       </div>
     </>

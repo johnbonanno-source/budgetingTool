@@ -26,7 +26,7 @@ const Header = ({ isLoggedIn, setLoggedIn }) => {
   return (
     <header className={classes.header}>
       <h1 className={classes.logo}>
-        BudgetHero <BsCreditCard2Back />
+        BH <BsCreditCard2Back />
       </h1>
       <div className={classes.navComponentBox}>
         <Link to="/" className={classes.navButton}>
@@ -38,10 +38,6 @@ const Header = ({ isLoggedIn, setLoggedIn }) => {
         </Link>
 
         {currentUrl != "http://localhost:3000/login" && renderLoginButton()}
-        {/* <Link className={classes.navButton}>
-          <AiOutlineMenu className={classes.menuIcon} />
-        </Link> */}
-        {/* maybe conditionally render this^ based on screen width */}
       </div>
     </header>
   );
