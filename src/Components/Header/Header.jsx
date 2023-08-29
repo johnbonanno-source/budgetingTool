@@ -12,18 +12,10 @@ const Header = () => {
     return (
       <Link
         to={isLoggedIn ? "/" : "/login"}
-        onClick={
-          isLoggedIn
-            ? () => {
-                localStorage.removeItem(tokenPrecheck);
-
-                localStorage.removeItem("accessToken");
-              }
-            : console.log("Login click")
-        }
+        onClick={isLoggedIn ? () => localStorage.removeItem("accesstoken") : null}
         className={classes.loginButton}
       >
-        {!isLoggedIn ? "Login" : "Logout"}
+        {isLoggedIn ? "Logout" : "Login"}
       </Link>
     );
   };
@@ -37,11 +29,9 @@ const Header = () => {
         <Link to="/" className={classes.navButton}>
           Home
         </Link>
-
         <Link to="/" className={classes.navButton}>
           Budget
         </Link>
-
         {currentUrl != "http://localhost:3000/login" && renderLoginButton()}
       </div>
     </header>
