@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
-@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+@import 'normalize.css';
 .header {
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
   max-height: 6rem;
 }
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 2rem;
   display: flex;

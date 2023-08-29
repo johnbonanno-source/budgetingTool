@@ -4,16 +4,15 @@ import addLoginHandler from "../../Api/LoginApi";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import LCC from "../../Assets/LCC.jpg";
-
 import Wrapper from "../../Components/Wrapper/Wrapper";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const tokenPrecheck = localStorage.getItem("accesstoken");
 
+  const tokenPrecheck = localStorage.getItem("accesstoken");
   useEffect(() => {
     if (tokenPrecheck) {
-      console.log("already logged in!");
+      console.log("already logged in");
       navigate("/home");
     }
   }, []);

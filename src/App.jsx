@@ -1,11 +1,11 @@
-import "./App.css";
-import { createBrowserRouter, RouterProvider, useOutletContext } from "react-router-dom";
-import LoginPage from "./Pages/Login and Registration Pages/LoginPage";
-import LandingPage from "./Pages/LandingPage";
-import RootLayout from "./Root";
-import RegistrationPage from "./Pages/Login and Registration Pages/RegistrationPage";
-import ErrorPage from "./Pages/ErrorPage";
-import BalanceBox from "./Components/BalanceBox/BalanceBox";
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import LoginPage from './Pages/Login and Registration Pages/LoginPage';
+import LandingPage from './Pages/LandingPage';
+import RootLayout from './Root';
+import RegistrationPage from './Pages/Login and Registration Pages/RegistrationPage';
+import ErrorPage from './Pages/ErrorPage';
+import BalanceBox from './Components/BalanceBox/BalanceBox';
 
 const router = createBrowserRouter([{
 

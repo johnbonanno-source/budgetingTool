@@ -1,6 +1,6 @@
-@import "normalize.css";
+@import 'normalize.css';
 .balanceAmount {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #02393b;
   font-size: medium;
 }

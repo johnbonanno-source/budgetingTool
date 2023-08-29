@@ -2,17 +2,25 @@ import classes from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { BsCreditCard2Back } from "react-icons/bs";
+import addLogoutHandler from "../../Api/LogoutApi";
 
 const Header = () => {
   const tokenPrecheck = localStorage.getItem("accesstoken");
   let isLoggedIn = tokenPrecheck != null;
   const currentUrl = window.location.href;
   const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    console.log("called");
+    localStorage.removeItem("accesstoken");
+    await addLogoutHandler();
+  };
+
   const renderLoginButton = () => {
     return (
       <Link
         to={isLoggedIn ? "/" : "/login"}
-        onClick={isLoggedIn ? () => localStorage.removeItem("accesstoken") : null}
+        onClick={isLoggedIn ? () => handleLogout() : null}
         className={classes.loginButton}
       >
         {isLoggedIn ? "Logout" : "Login"}
@@ -32,7 +40,7 @@ const Header = () => {
         <Link to="/" className={classes.navButton}>
           Budget
         </Link>
-        {currentUrl != "http://localhost:3000/login" && renderLoginButton()}
+        {currentUrl !== "http://localhost:3000/login" && renderLoginButton()}
       </div>
     </header>
   );
