@@ -5,10 +5,13 @@ import Footer from "../Components/Footer/Footer";
 
 const RootLayout = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
   return (
     <>
       <div>
-        <Header isLoggedIn = {isLoggedIn} setLoggedIn={setLoggedIn} />
+        <Header isLoggedIn = {isLoggedIn} setLoggedIn={setLoggedIn} handleLogout={handleLogout} />
         <Outlet context={[isLoggedIn, setLoggedIn]} />
         <Footer />
       </div>
