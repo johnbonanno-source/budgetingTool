@@ -1,68 +1,18 @@
-@import 'normalize.css'; 
+@import "normalize.css";
 .balanceAmount {
   font-family: "Raleway", sans-serif;
-  color: #02393B;
-  font-size: medium; 
-  
+  color: #02393b;
+  font-size: medium;
 }
 .balanceBox {
   display: grid;
   grid-template-columns: 0fr 0fr;
   justify-content: center;
-
-  
 }
 
-
-
-.modifyButton {
-  
-  /* border: none;
-  border-radius: 4px;
-  width: 10rem;
-  line-height: 10px;
-  margin: auto;
-  color: #F4EDEA;
-  border: .1rem solid #02393B; 
-  padding-left: 2rem; */
-
-}
-
-.modifyButton:hover {
-   /* background-color:#02393B;
-  color: #F4EDEA;
-  transition: background-color 0.2s;
-  border: .1rem solid #F4EDEA;
-  width: 4rem; */
-
-}
-
-
-.balanceBackgroundBox {
-  
-  padding:0;
-  font-family: "Raleway", sans-serif;
-  width: 10rem;
-  height: 1rem;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.balanceBoxContainer{
-  margin-top: 1rem;
-  font-family: "Raleway", sans-serif;
-  border:none;
+.balanceBoxContainer {
   width: 100%;
-  height: 40rem;
-  justify-content: center;
-  
-}
-
-.balanceBoxTwoToneContainer{
-  max-width: 40rem;
-
-  width: 50%;
+  max-width: 25rem;
   height: 6rem;
   padding-top: 1rem;
   margin-left: auto;
@@ -70,26 +20,6 @@
   padding-bottom: 1rem;
   background-color: #dde4e5;
   border-radius: 4px;
-
-
-  
 }
 
 
-.balanceBoxInput {
-  margin-bottom: 25px;
-  width: 90%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  max-width: 20rem;
-  height: 1.1rem;
-  margin-right: 10px;
-  margin-left: 10px;
-  
-  background-color: #F4EDEA;
-  justify-content: center;
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  margin-bottom: 1rem;
-}

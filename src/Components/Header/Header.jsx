@@ -3,12 +3,20 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { BsCreditCard2Back } from "react-icons/bs";
 
-const Header = ({ isLoggedIn, setLoggedIn,handleLogout }) => {
-  const navigate = useNavigate();
-
-
-
+const Header = ({ isLoggedIn, setLoggedIn, handleLogout }) => {
   const currentUrl = window.location.href;
+  const navigate = useNavigate();
+  const renderLoginButton = () => {
+    return (
+      <Link
+        to={isLoggedIn ? "/" : "/login"}
+        onClick={isLoggedIn ? () => setLoggedIn(false) : ""}
+        className={classes.loginButton}
+      >
+        {!isLoggedIn ? "Login" : "Logout"}
+      </Link>
+    );
+  };
   console.log(currentUrl);
   console.log(isLoggedIn);
   return (
@@ -25,13 +33,7 @@ const Header = ({ isLoggedIn, setLoggedIn,handleLogout }) => {
           Budget
         </Link>
 
-        <Link
-          to={isLoggedIn ? '/': '/login'}
-          onClick={isLoggedIn ? () => setLoggedIn(false) : ""}
-          className={classes.loginButton}
-          >
-          {!isLoggedIn ? "Login" : "Logout"}
-        </Link>
+        {currentUrl != "http://localhost:3000/login" && renderLoginButton()}
       </div>
     </header>
   );

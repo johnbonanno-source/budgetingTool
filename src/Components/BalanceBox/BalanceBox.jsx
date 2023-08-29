@@ -1,6 +1,8 @@
 import classes from "./BalanceBox.module.css";
-import { Link } from "react-router-dom";
-function BalanceBox({ balance, setBalance }) {
+import { useState } from "react";
+function BalanceBox() {
+  const [balance, setBalance] = useState(10);
+
   const handleAddButtonClick = () => {
     let inputfield = document.getElementById("incrementBalance");
     let delta = parseInt(inputfield.value);
@@ -19,38 +21,16 @@ function BalanceBox({ balance, setBalance }) {
 
   return (
     <>
-      <div className={classes.balanceBoxContainer}>
-        <div className={classes.balanceBoxTwoToneContainer}>
-          <header className={classes.balanceBackgroundBox}>
-            <h1 className={classes.balanceAmount}>
-              Current Balance: {balance}
-            </h1>
-          </header>
-
+        <div className={classes.balanceBoxContainer}>
+          <h1 className={classes.balanceAmount}>Current Balance: {balance}</h1>
           <div className={classes.balanceBox}>
-            <input
-              className={classes.balanceBoxInput}
-              id={"incrementBalance"}
-            />
-            <input
-              className={classes.balanceBoxInput}
-              id={"decrementBalance"}
-            />
-            <button
-              className={classes.modifyButton}
-              onClick={handleAddButtonClick}
-            >
-              Deposit
-            </button>
-            <button
-              className={classes.modifyButton}
-              onClick={handleSubtractButtonClick}
-            >
-              Withdraw
-            </button>
+            <input id={"incrementBalance"} />
+            <input id={"decrementBalance"} />
+            <button onClick={handleAddButtonClick}>Deposit</button>
+            <button onClick={handleSubtractButtonClick}>Withdraw</button>
           </div>
         </div>
-      </div>
+
     </>
   );
 }

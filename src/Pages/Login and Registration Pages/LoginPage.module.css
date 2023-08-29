@@ -1,0 +1,49 @@
+@import "normalize.css";
+.loginBtn {
+  background-color: #02393b;
+  color: #f4edea;
+  height: 1rem;
+  width: 100%;
+  max-width: 10rem;
+  border-radius: 4px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: small;
+  padding: 0;
+}
+
+.logininput {
+  margin-bottom: 25px;
+  width: 90%;
+  max-width: 10rem;
+  border-radius: 5px;
+  height: 1rem;
+
+
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBoxStyles {
+  margin-top: 23rem;
+  margin-bottom: 23rem;
+
+  background-color: white;
+  width: 15rem;
+  max-width: 200rem;
+  max-height: 5rem;
+  /* width: 30%; */
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10rem;
+  position: relative;
+}
+
+.linkStyle {
+  padding-left: 2rem;
+}

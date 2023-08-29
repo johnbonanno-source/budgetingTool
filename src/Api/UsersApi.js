@@ -1,6 +1,6 @@
 // import axios from 'axios';
 
-// const BASE_URL = 'http://localhost:5134'; // Replace with your API's base URL
+// const BASE_URL = 'http://localhost:5134';
 
 // const UsersApi = (route) => {
 //   const url = `${BASE_URL}/${route}`;
@@ -22,8 +22,6 @@
 //       throw error;
 //     }
 //   };
-
-//   // You can define more methods like PUT, DELETE, etc., following a similar pattern
 
 //   return {
 //     get
