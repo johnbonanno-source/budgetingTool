@@ -43,7 +43,6 @@ const Register = () => {
             <button
               type="submit"
               className={classes.loginBtn}
-              onClick={console.log("click")}
             >
               Login
             </button>

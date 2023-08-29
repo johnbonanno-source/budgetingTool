@@ -5,6 +5,7 @@ header {
 
 form{
   /* background-color: white; */
+ 
 }
 
 input {
@@ -20,17 +21,16 @@ input {
 
 img {
   position: absolute;
-  /* top: 0;
-  left: 0; */
+  
   width: 100%; /* Cover the entire container */
   height:100%;
-  /* object-fit: cover; */
+
   z-index: -1; /* Place the image behind other content */
   margin-right: auto;
   margin-left: auto;
   align-items: center;
   justify-content: center;
-
+  padding-top: 100px;
 }
 
 button:hover {

@@ -6,8 +6,7 @@
   justify-content: space-between;
   background-color: #c5d8d1;
   /* border-bottom: .1rem solid #905214; */
-  max-height: 2rem;
-
+  max-height: 6rem;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -29,11 +28,11 @@
   background-color:#f4edea;
   color:  #02393b;
   max-height: 1rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: small;
+  font-size: medium;
   
   border-radius: 4px;
 }
@@ -42,11 +41,11 @@
   /* #C5D8D1; */
   color: #f4edea;
   max-height: 1rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: small;
+  font-size: medium;
 
   border-radius: 4px;
   border: 0.1rem solid #02393b;
