@@ -9,8 +9,8 @@ import Wrapper from "../../Components/Wrapper/Wrapper";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-
   const tokenPrecheck = localStorage.getItem("accesstoken");
+
   useEffect(() => {
     if (tokenPrecheck) {
       console.log("already logged in!");

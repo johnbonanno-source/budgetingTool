@@ -7,7 +7,6 @@ const ErrorPage = () => {
         <h1>Error Page</h1>
         <Link to='/home'> Home </Link>
     </div>
-
 }
 
 export default ErrorPage;
