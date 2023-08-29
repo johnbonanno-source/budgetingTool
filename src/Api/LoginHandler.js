@@ -13,13 +13,14 @@ const addLoginHandler = async (username, password) => {
 
     if (!response.ok) {
       throw new Error("Login failed");
-      
     }
 
     const responseData = await response.json();
-    const token = responseData.token; 
+    const token = responseData; 
 
-    console.log("Logged in successfully. Token:", token);
+    console.log(token);
+    
+    console.log("Logged in successfully. Cookie:", token);
     return token;
   } catch (error) {
     console.error("Login error:", error.message);

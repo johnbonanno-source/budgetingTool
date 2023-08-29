@@ -4,18 +4,23 @@
 .loginBoxContainer{
   font-family: "Raleway", sans-serif;
   width: 100%;
+  max-width: 60rem;
   height: 50vh;
   display: flex;
   align-items: center; 
   justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .loginBoxStyles{
-  background-color: #F4EDEA;
-  width: 20%;
+  background-color: white;
+  min-width: 20rem;
+  max-width: 80%;
+  width: 30%;
   height: 25;
   display: flex;
   align-items: center; 
   justify-content: center;
-  
+  padding-bottom: 1rem;
 }

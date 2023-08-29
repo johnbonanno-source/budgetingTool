@@ -20,24 +20,35 @@ function BalanceBox({ balance, setBalance }) {
   return (
     <>
       <div className={classes.balanceBoxContainer}>
-        <header className={classes.balanceBackgroundBox}>
-          <h1 className={classes.balanceAmount}>Current Balance: {balance}</h1>
-        </header>
-        <div className={classes.balanceBox}>
-          <input id={"incrementBalance"} />
-          <input id={"decrementBalance"} />
-          <button
-            className={classes.modifyButton}
-            onClick={handleAddButtonClick}
-          >
-            Deposit
-          </button>
-          <button
-            className={classes.modifyButton}
-            onClick={handleSubtractButtonClick}
-          >
-            Withdraw
-          </button>
+        <div className={classes.balanceBoxTwoToneContainer}>
+          <header className={classes.balanceBackgroundBox}>
+            <h1 className={classes.balanceAmount}>
+              Current Balance: {balance}
+            </h1>
+          </header>
+
+          <div className={classes.balanceBox}>
+            <input
+              className={classes.balanceBoxInput}
+              id={"incrementBalance"}
+            />
+            <input
+              className={classes.balanceBoxInput}
+              id={"decrementBalance"}
+            />
+            <button
+              className={classes.modifyButton}
+              onClick={handleAddButtonClick}
+            >
+              Deposit
+            </button>
+            <button
+              className={classes.modifyButton}
+              onClick={handleSubtractButtonClick}
+            >
+              Withdraw
+            </button>
+          </div>
         </div>
       </div>
     </>

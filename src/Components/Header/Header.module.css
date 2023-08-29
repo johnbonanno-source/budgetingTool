@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #12263a;
-  border-bottom: .1rem solid #905214;
+  /* background-color: #12263a; */
+  /* border-bottom: .1rem solid #905214; */
   height: 6rem;
 }
 .logo {
@@ -15,14 +15,49 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  color: #F4EDEA;
+  color:#12263a; 
   height: 4rem;
+  max-width: 40rem;
+  
 }
 
+.loginButton {
+  background-color:#F4EDEA;
+   /* #C5D8D1; */
+  color: #02393B;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 1.1rem;
+  border-radius: 4px;
+  border: .1rem solid #F4EDEA;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
+.loginButton:hover {
+  background-color:#F4EDEA;
+   /* #C5D8D1; */
+  color: #02393B;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  height: 1.1rem;
+
+  border-radius: 4px;
+  border: .1rem solid #02393B;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
 .navButton {
-  background-color: #C5D8D1;
-  color: #2a2630;
+  background-color:#02393B;
+   /* #C5D8D1; */
+  color: #F4EDEA;
 
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -46,8 +81,7 @@
   text-decoration: underline;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  
-  border: .1rem solid #905214;
+  border: .1rem solid #F4EDEA;
 
 
 }
