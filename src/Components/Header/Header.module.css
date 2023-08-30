@@ -2,12 +2,10 @@
 @import 'normalize.css';
 .header {
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center; 
   justify-content: space-between;
   background-color: #c5d8d1;
-  /* border-bottom: .1rem solid #905214; */
-  max-height: 2.5rem; /* Changed value for visibility */
-  padding-bottom: 1.5rem;
+  max-height: 2.5rem; 
   height:1rem
 }
 .logo {
