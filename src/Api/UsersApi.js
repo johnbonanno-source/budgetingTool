@@ -1,32 +1,32 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// const BASE_URL = 'http://localhost:5134';
+const BASE_URL = 'http://localhost:2001';
 
-// const UsersApi = (route) => {
-//   const url = `${BASE_URL}/${route}`;
+const UsersApi = (route) => {
+  const url = `${BASE_URL}/${route}`;
 
-//   const get = async () => {
-//     try {
-//       const response = await axios.get(url);
-//       return response.data;
-//     } catch (error) {
-//       throw error;
-//     }
-//   };
+  const get = async () => {
+    try {
+      const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
 
-//   const post = async (data) => {
-//     try {
-//       const response = await axios.post(url, data);
-//       return response.data;
-//     } catch (error) {
-//       throw error;
-//     }
-//   };
+  const post = async (data) => {
+    try {
+      const response = await axios.post(url, data);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
 
-//   return {
-//     get
-//     //post,
-//   };
-// };
+  return {
+    get
+    //post,
+  };
+};
 
-// export default UsersApi;
+export default UsersApi;

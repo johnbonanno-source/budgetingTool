@@ -1,4 +1,26 @@
 @import "normalize.css";
+.loginBoxStyles {
+  height:16rem;
+  background-color: white;
+  width: 15rem;
+  max-width: 200rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logininput {
+  margin-bottom: 1rem;
+  max-width: 7rem;
+  border-radius: 5px;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .loginBtn {
   background-color: #02393b;
   color: #f4edea;
@@ -19,70 +41,8 @@
   margin-top: 1.5rem;
 }
 
-.loginBtn2 {
-  background-color: #02393b;
-  color: #f4edea;
-  height: .8rem;
-  width: 100%;
-  max-width: 7rem;
-  border-radius: 4px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  margin-right: auto;
-  margin-left: auto;
-  font-size: small;
-  padding: 0;
-  margin-top: .5rem;
-}
 
-.logininput2 {
-  margin-top: 0rem;
-
-  margin-bottom: .4rem;
-  max-width: 7rem;
-  border-radius: 5px;
-  height: .7rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.h4{
-  
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-}
-.logininput {
-  margin-bottom: 1rem;
-  max-width: 7rem;
-  border-radius: 5px;
-  height: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-.loginBoxStyles2 {
-  height:.09rem;
-  background-color: white;
-  width: 9rem;
-  max-width: 20rem;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 8rem;
-  margin-top: 1rem;
-}
-
-.loginBoxStyles {
-  height:6rem;
-  background-color: white;
-  width: 15rem;
-  max-width: 200rem;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10rem;
-  position: relative;
-}
 
 .linkStyle {
   padding-left: 2rem;

@@ -2,16 +2,17 @@
 @import 'normalize.css';
 .header {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center items */
   justify-content: space-between;
   background-color: #c5d8d1;
   /* border-bottom: .1rem solid #905214; */
-  max-height: .5rem;
-  margin-bottom: .5rem;
+  max-height: 2.5rem; /* Changed value for visibility */
+  padding-bottom: 1.5rem;
+  height:1rem
 }
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2rem;
   display: flex;
   gap: 1.5rem;
@@ -30,7 +31,7 @@
   color:  #02393b;
   max-height: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: medium;
@@ -43,7 +44,7 @@
   color: #f4edea;
   max-height: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: medium;

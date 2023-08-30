@@ -10,7 +10,7 @@
     bottom: 0;
     width: 100%;
     border-top: .1rem solid #905214;
-    height:16vh;
+    height:2rem;
     
   }
 .footerContainer {
@@ -18,25 +18,25 @@
 }
 .footerList {
   flex: 1;
-  padding-top: 3rem;
+  
   /* display: flex;
   flex-direction: column;
   align-items: center; */
   
 }
 .linkStyle {
-  margin-block-start: 0;
-  margin-block-end: 0;
+ 
   font-size: small;
   font-family: 'Raleway', sans-serif;
   padding: 0.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
   /* background-color: #C5D8D1; */
   color: #C5D8D1;
-  font-weight: 500;
+  font-weight: 400;
 }
 .linkStyle:hover {
   background-color:#C5D8D1;
   color: #12263A;
-   text-decoration: underline;
   transition: color 0.3s;
 }

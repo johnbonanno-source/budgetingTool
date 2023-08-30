@@ -12,8 +12,8 @@ const addLoginHandler = async (username, password) => {
       throw new Error('Login failed');
     }
     const responseData = await response.json();
-    console.log('logged in'+responseData);
-    const token = responseData;
+    console.log(responseData);
+    const token = "Behavior Token";
     return token;
   } catch (error) {
     console.error('Login error:', error.message);

@@ -13,6 +13,7 @@ const addLogoutHandler = async () => {
       const responseData = await response.json();
       console.log('logged out'+responseData);
 
+      return responseData;
     } catch (error) {
       console.error('Login error:', error.message);
     }
