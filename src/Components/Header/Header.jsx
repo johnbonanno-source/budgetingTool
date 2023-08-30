@@ -11,7 +11,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    console.log('called');
     localStorage.removeItem('accesstoken');
     await addLogoutHandler();
   };

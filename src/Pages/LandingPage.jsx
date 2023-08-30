@@ -7,12 +7,13 @@ import { useEffect } from 'react';
 
 const LandingPage = () => {
   useEffect(() => {
-    fetch('http://localhost:2001/getUsers',{
-    method: 'GET',
-    credentials: 'include',
-  })
-      .then(response => {
-        console.log('Data from API call:', response.data);
+    fetch('http://localhost:2001/getUsers', {
+      method: 'GET',
+      credentials: 'include',
+    })
+      .then(response => response.json())  // Parse the response as JSON
+      .then(data => {
+        console.log('Data from API call:', data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
