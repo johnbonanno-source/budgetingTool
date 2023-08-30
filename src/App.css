@@ -24,7 +24,7 @@ img {
   
   width: 100%; /* Cover the entire container */
   height:100%;
-
+  margin-bottom: -2rem;
   z-index: -1; /* Place the image behind other content */
   margin-right: auto;
   margin-left: auto;
