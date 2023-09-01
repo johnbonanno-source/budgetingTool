@@ -1,5 +1,5 @@
-import React from "react";
-import ExpenseItem from "../ExpenseTracker/ExpenseItem";
+import React from 'react';
+import ExpenseItem from '../ExpenseTracker/ExpenseItem';
 function ExpenseList({ expenses }) {
   return (
     <>

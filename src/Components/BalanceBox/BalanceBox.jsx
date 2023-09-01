@@ -1,14 +1,14 @@
-import classes from "./BalanceBox.module.css";
+import classes from './BalanceBox.module.css';
 
 function BalanceBox({ balance, setBalance }) {
   const handleButtonClick = (event) => {
     const buttonName = event.target.name;
     const inputField = document.getElementById(
-      buttonName === "deposit" ? "incrementBalance" : "decrementBalance"
+      buttonName === 'deposit' ? 'incrementBalance' : 'decrementBalance'
     );
     const delta = parseInt(inputField.value);
-    if (typeof delta === "number" && !isNaN(delta)) {
-      setBalance(buttonName === "deposit" ? balance + delta : balance - delta);
+    if (typeof delta === 'number' && !isNaN(delta)) {
+      setBalance(buttonName === 'deposit' ? balance + delta : balance - delta);
     }
   };
 
@@ -17,18 +17,18 @@ function BalanceBox({ balance, setBalance }) {
       <div className={classes.balanceBoxContainer}>
         <h1 className={classes.balanceAmount}>Current Balance: {balance}</h1>
         <div className={classes.balanceBox}>
-          <input className={classes.balanceInput} id={"incrementBalance"} />
-          <input className={classes.balanceInput} id={"decrementBalance"} />
+          <input className={classes.balanceInput} id={'incrementBalance'} />
+          <input className={classes.balanceInput} id={'decrementBalance'} />
           <button
             className={classes.balanceButton}
-            name="deposit"
+            name='deposit'
             onClick={handleButtonClick}
           >
             Deposit
           </button>
           <button
             className={classes.balanceButton}
-            name="withdraw"
+            name='withdraw'
             onClick={handleButtonClick}
           >
             Withdraw
