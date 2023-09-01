@@ -35,7 +35,7 @@ const LoginPage = () => {
     if (token) {
       console.log(token);
       localStorage.setItem('accesstoken', token);
-      navigate('/home');
+      navigate('/');
     }
   };
 

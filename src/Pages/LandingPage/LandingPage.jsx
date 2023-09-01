@@ -1,6 +1,6 @@
 import { BsCreditCard2Back } from 'react-icons/bs';
-import LCC from '../Assets/LCC.jpg';
-import Wrapper from '../Components/Wrapper/Wrapper';
+import LCC from '../../Assets/LCC.jpg';
+import Wrapper from '../../Components/Wrapper/Wrapper';
 import classes from './LandingPage.module.css';
 import axios from 'axios';
 import { useEffect } from 'react';

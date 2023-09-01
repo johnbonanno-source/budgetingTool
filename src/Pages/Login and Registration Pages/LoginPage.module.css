@@ -1,6 +1,6 @@
-@import 'normalize.css';
+@import "normalize.css";
 .loginBoxStyles {
-  height:16rem;
+  height: 16rem;
   background-color: white;
   width: 15rem;
   max-width: 200rem;
@@ -19,6 +19,11 @@
   height: 1rem;
   align-items: center;
   justify-content: center;
+
+  display: flex;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .loginBtn {
@@ -40,9 +45,6 @@
   padding: 0;
   margin-top: 1.5rem;
 }
-
-
-
 
 .linkStyle {
   padding-left: 2rem;

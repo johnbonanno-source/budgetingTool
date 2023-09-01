@@ -1,0 +1,46 @@
+
+.formStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0rem; 
+  margin: 0;
+  background-color: #dde4e5;
+  width: 40rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem; /* Gap between label and input */
+}
+
+.label {
+  font-weight: bold;
+}
+
+.expenseInput {
+  /* padding: 0.5rem; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.submitExpense {
+  background-color: #02393b;
+  color: #f4edea;
+  font-size: small;
+  height: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submitExpense:hover {
+  background-color: #f4edea;
+  color: #02393b;
+}

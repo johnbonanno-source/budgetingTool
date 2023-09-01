@@ -8,20 +8,21 @@
   display: grid;
   grid-template-columns: 0fr 0fr;
   justify-content: center;
+  gap: 1rem;
   
 }
 
 .balanceBoxContainer {
   background-color: #dde4e5;
-  width: 20rem;
-  height: 8rem;
+  width: 40rem;
+  height: 6.5rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top:3rem;
+  /* margin-top:3rem; */
   padding-top: 1rem;
   padding-bottom: 0rem;
 }
@@ -31,11 +32,13 @@
   background-color: #02393b;
   color: #f4edea;
   max-height: 1rem;
-  max-width: 6.5rem;
+  max-width: 8rem;
   font-size: medium;
   border-radius: 4px;
   border: 0.1rem solid #02393b;
-  height: 0rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
 }
 
 .balanceButton:hover {
@@ -48,12 +51,13 @@
 }
 
 .balanceInput{
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     max-width: 7rem;
     border-radius: 5px;
     /* height: 1rem; */
     align-items: center;
     justify-content: center;
+
   
 }
 
