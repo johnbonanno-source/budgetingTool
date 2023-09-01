@@ -36,7 +36,7 @@ const Header = () => {
         <Link to='/' className={classes.navButton}>
           Home
         </Link>
-        <Link to='/' className={classes.navButton}>
+        <Link to='/budget' className={classes.navButton}>
           Budget
         </Link>
         {currentUrl !== 'http://localhost:3000/login' && renderLoginButton()}

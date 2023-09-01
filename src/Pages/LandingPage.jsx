@@ -26,6 +26,9 @@ const LandingPage = () => {
         <h1 className={classes.logo}>
           BudgetHero <BsCreditCard2Back />
         </h1>
+        <h1 className={classes.logo}>
+          Let's Get that budget, balanced.
+        </h1>
       </Wrapper>
     </>
   );
