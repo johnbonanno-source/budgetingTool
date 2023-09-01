@@ -15,6 +15,7 @@ const ExpenseForm = ({ expense, setExpense }) => {
   };
 
   return (
+    <>
     <form className={classes.formStyle} onSubmit={handleSubmit}>
       <div className={classes.inputContainer}>
         <input
@@ -44,8 +45,9 @@ const ExpenseForm = ({ expense, setExpense }) => {
           dateFormat='MM/dd/yyyy'
         />
       </div>
-      <button className={classes.submitExpense} type='submit'>Submit</button>
     </form>
+      <button className={classes.submitExpense} type='submit'>Submit</button>
+    </>
   );
 };
 
