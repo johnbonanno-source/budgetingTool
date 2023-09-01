@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C5D8D1;
+  background-color: #616161;
+  overflow: auto;
+  padding-bottom: 40px;
 }
 
 code {

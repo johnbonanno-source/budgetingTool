@@ -1,7 +1,7 @@
 @import 'normalize.css';
 .loginBoxStyles {
   height: 16rem;
-  background-color: white;
+  background-color: #616161;
   width: 15rem;
   max-width: 200rem;
   align-items: center;
@@ -10,6 +10,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
 }
 
 .logininput {
@@ -48,4 +49,8 @@
 
 .linkStyle {
   padding-left: 2rem;
+}
+
+.white{
+  color:#f4edea;
 }

@@ -5,4 +5,4 @@ export { default as ErrorPage } from './Pages/ErrorPage';
 export { default as BalanceBox } from './Components/BalanceBox/BalanceBox';
 export { default as BudgetPage } from './Pages/BudgetPage/BudgetPage';
 export { default as LandingPage } from './Pages/LandingPage/LandingPage';
-
+export { default as GridComponent } from './Components/Grid/GridComponent';

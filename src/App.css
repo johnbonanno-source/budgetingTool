@@ -4,7 +4,7 @@ header {
 }
 
 input {
-  background-color: #f4edea;
+  background-color:#f4edea;
 }
 
 img {
@@ -32,6 +32,6 @@ button {
 
   border-radius: 4px;
   border: 0.1rem solid #02393b;
-
+  
   justify-content: center;
 }

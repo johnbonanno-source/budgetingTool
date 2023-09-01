@@ -1,6 +1,6 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { LoginPage,LandingPage, RootLayout, RegistrationPage, ErrorPage, BalanceBox, BudgetPage } from './components';
+import { GridComponent,LoginPage,LandingPage, RootLayout, RegistrationPage, ErrorPage, BalanceBox, BudgetPage } from './components';
 
 const router = createBrowserRouter([{
 
@@ -11,6 +11,7 @@ const router = createBrowserRouter([{
       { path: '/budget', element: <BudgetPage /> },
       { path:'/register', element: <RegistrationPage /> },
       { path:'/login', element: <LoginPage /> },
+      { path:'/grid', element: <GridComponent /> },
     ], 
   },
 ]);

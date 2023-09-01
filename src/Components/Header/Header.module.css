@@ -5,8 +5,10 @@
   align-items: center; 
   justify-content: space-between;
   background-color: #c5d8d1;
-  max-height: 2.5rem; 
-  height:1rem;
+  /* max-height: 2.5rem;  */
+  height:.3rem;
+  margin-bottom: 1rem;
+  /* width: 100vh; */
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -21,36 +23,32 @@
 }
 
 .loginButton {
-  border: 0.1rem solid #f4edea;
-  margin-right: 10px;
-  margin-left: 10px;
-
   background-color:#f4edea;
   color:  #02393b;
+  border: 0.1rem solid #f4edea;
   max-height: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 0rem;
+  padding-bottom: 0.1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-size: medium;
-  
+  font-size: small;
   border-radius: 4px;
 }
 .navButton {
   background-color: #02393b;
-  /* #C5D8D1; */
   color: #f4edea;
-  max-height: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: medium;
-
-  border-radius: 4px;
   border: 0.1rem solid #02393b;
+  max-height: 1rem;
   margin-right: 10px;
   margin-left: 10px;
+  padding-top: 0rem;
+  padding-bottom: 0.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: small;
+  border-radius: 4px;
 }
 
 .navButton:hover {

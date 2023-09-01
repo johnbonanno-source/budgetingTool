@@ -1,6 +1,7 @@
 import React from 'react';
 import ExpenseDate from './ExpenseDate';
 import classes from './ExpenseItem.module.css';
+import Grid from '@mui/material/Grid';
 
 function ExpenseItem(props) {
   return (

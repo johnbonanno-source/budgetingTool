@@ -44,7 +44,7 @@ const LoginPage = () => {
       <Wrapper>
         <img src={LCC} alt='pic' />
         <div className={classes.loginBoxStyles}>
-          <h4>Login</h4>
+          <h4 className={classes.white}>Login</h4>
           <form onSubmit={handleLogin}>
             <input
               className={classes.logininput}

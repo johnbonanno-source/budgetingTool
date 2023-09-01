@@ -20,7 +20,7 @@ const Register = () => {
       <Wrapper>
         <img src={LCC} alt='pic' />
         <div className={classes.loginBoxStyles}>
-          <h4>Register</h4>
+          <h4 className={classes.white}>Register</h4>
           <form>
             <input
               className={classes.logininput}
