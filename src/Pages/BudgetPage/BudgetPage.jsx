@@ -7,39 +7,31 @@ import Grid from "@mui/material/Grid";
 
 function BudgetPage() {
   const [balance, setBalance] = useState(10);
-  const [expense, setExpense] = useState({
-    title: "",
-    amount: "",
-    date: new Date(),
-  });
-  const expenses = [
+  
+  const [expenses, setExpenses] = useState([
     {
       id: "e1",
       title: "Toilet Paper",
       amount: 94.12,
       date: new Date(2020, 7, 14),
-    },
-    {
-      id: "e1",
-      title: "Toilet Paper",
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-    },
+    }
+  ]);
 
-    {
-      id: "e1",
-      title: "Toilet Paper",
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-    },
-  ];
+
+  const handleSetExpense = ( expenseItem ) => {
+    console.log(expenseItem);
+    
+  }
+
+ 
+  
   return (
     <>
       <Wrapper>
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={11}>
             <BalanceBox balance={balance} setBalance={setBalance} />
-            <ExpenseForm expense={expense} setExpense={setExpense} />
+            <ExpenseForm handleSetExpense={handleSetExpense} />
             <ExpenseList expenses={expenses} />
           </Grid>
         </Grid>
