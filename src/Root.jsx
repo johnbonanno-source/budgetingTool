@@ -2,11 +2,12 @@ import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import NavBar from './Components/NavBar/NavBar';
 const RootLayout = () => {
   return (
     <>
       <div>
-        <Header />
+        <NavBar />
         <Outlet />
         <Footer />
       </div>
