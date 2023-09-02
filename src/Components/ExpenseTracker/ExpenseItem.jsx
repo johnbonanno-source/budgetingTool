@@ -7,10 +7,11 @@ function ExpenseItem(props) {
   return (
     <div className={classes.expenseItemBackground}>
     <div className={classes.container}>
-      <h3>{props.title}</h3>
-      <div>${props.amount}</div>
+
+      <h3 className={classes.item}>{props.title}</h3>
+      <div className={classes.item}>${props.amount}</div>
       <ExpenseDate date={props.date} />
-      <h2>{props.expenseAmount}</h2>
+
     </div>
     </div>
   );

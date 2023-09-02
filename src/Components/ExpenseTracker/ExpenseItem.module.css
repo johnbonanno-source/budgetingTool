@@ -17,3 +17,22 @@
     justify-content: space-evenly;
     flex: 1;
   }
+
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%rem;
+    height: 1rem;
+    /* border: 1px solid #ececec; */
+    /* background-color: #02393b; */
+    color: white;
+    border-radius: 4px;
+    align-items: center;
+    gap: .1rem;
+    font-size: 0.75rem;
+  }
+  
+
+

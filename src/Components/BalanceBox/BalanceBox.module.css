@@ -32,7 +32,7 @@
   background-color: #02393b;
   color: #f4edea;
   max-height: 1rem;
-  max-width: 8rem;
+  /* max-width: 8rem; */
   font-size: medium;
   border-radius: 4px;
   border: 0.1rem solid #02393b;
@@ -52,7 +52,7 @@
 
 .balanceInput{
     margin-bottom: 0rem;
-    max-width: 7rem;
+    /* max-width: 5rem; */
     border-radius: 5px;
     /* height: 1rem; */
     align-items: center;
