@@ -1,5 +1,5 @@
 .box {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   display: flex;
   flex-direction: column;
   text-align: center; 
@@ -7,4 +7,15 @@
   justify-content: center;
   min-height: 100vh;
   min-width: 100vh;
+}
+
+
+.balanceInputComponent{
+  /* background-color: rgb(142, 23, 23); */
+  padding-top: 500px;
+}
+
+.BoxColor{
+    background-color: rgb(142, 23, 23);
+
 }

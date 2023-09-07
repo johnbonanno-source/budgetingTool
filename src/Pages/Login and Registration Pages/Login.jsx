@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import addLoginHandler from "../../Api/LoginApi";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import "./Login.css";
-import { Button, Box } from "@mui/material/";
-import { InputComponent } from "../../components";
+import addLoginHandler from "../../Api/LoginApi";
+import {
+  InputComponent,
+  ButtonComponent,
+  BoxComponent,
+} from "../../components";
 import LCC from "../../Assets/LCC.jpg";
+import "./Login.css";
 
 const schema = Yup.object().shape({
-  username: Yup.string()
-    .required("Email is a required field"),
+  username: Yup.string().required("Email is a required field"),
   password: Yup.string()
     .required("Password is a required field")
     .min(6, "Password must be at least 6 characters"),
@@ -38,6 +40,7 @@ const Login = () => {
   };
 
   const handleLogin = async (event) => {
+    console.log("called");
     event.preventDefault();
     const token = await addLoginHandler(
       credentials.username,
@@ -52,8 +55,8 @@ const Login = () => {
 
   return (
     <>
-      <img src={LCC} alt="pic" />
-      <Box className="box">
+      <BoxComponent>
+        <img src={LCC} alt="pic" />
         <Formik
           validationSchema={schema}
           initialValues={{ username: "", password: "" }}
@@ -69,53 +72,45 @@ const Login = () => {
             handleBlur,
             handleLogin,
           }) => (
-            <div className="login">
-              <div className="form">
-                <form noValidate onSubmit={handleLogin}>
-                  <span>Login</span>
-                  <InputComponent
-                    type="username"
-                    name="username"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.username}
-                    placeholder="Enter username"
-                    id="username"
-                  />
-                  <p className="error">
-                    {errors.username && touched.username && errors.username}
-                  </p>
-                  <InputComponent
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.password}
-                    placeholder="Enter password"
-                    id="password"
-                  />
-                  <p className="error">
-                    {errors.password && touched.password && errors.password}
-                  </p>
-                  <Button
-                    type="submit"
-                    color="secondary"
-                    onSubmit={handleLogin}
-                    sx={{
-                      ":hover": {
-                        bgcolor: "#545775",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    Login
-                  </Button>
-                </form>
-              </div>
+            <div className='login'>
+
+            
+            <div className="form">
+              <form noValidate onSubmit={handleLogin}>
+                <span>Login</span>
+                <InputComponent
+                  type="username"
+                  name="username"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.username}
+                  placeholder="Enter username"
+                  id="username"
+                />
+                <p className="error">
+                  {errors.username && touched.username && errors.username}
+                </p>
+                <InputComponent
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                  placeholder="Enter password"
+                  id="password"
+                />
+                <p className="error">
+                  {errors.password && touched.password && errors.password}
+                </p>
+                <ButtonComponent type="submit" onSubmit={handleLogin}>
+                  Login
+                </ButtonComponent>
+              </form>
+            </div>
             </div>
           )}
         </Formik>
-      </Box>
+      </BoxComponent>
     </>
   );
 };
