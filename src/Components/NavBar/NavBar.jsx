@@ -36,19 +36,18 @@ const NavBar = () => {
       <AppBar position='static'>
         <Toolbar>
           <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            BudgetHero <BsCreditCard2Back className={classes.logo} />
+            BH <BsCreditCard2Back className={classes.logo} />
           </Typography>
           <ButtonGroup variant='contained' aria-label='navbar button group'>
-            <Button href='./' sx={{ '&:hover': { border: '1px solid white' } }}>
+            <Button href='./'>
               Home
             </Button>
-            <Button href='./budget' sx={{ '&:hover': { border: 'none' } }}>
+            <Button href='./budget' >
               Budget
             </Button>
             <Button
               href={isLoggedIn ? '/' : '/login'}
               onClick={isLoggedIn ? () => handleLogout() : null}
-              sx={{ '&:hover': { border: 'none' } }}
             >
               {isLoggedIn ? 'Logout' : 'Login'}
             </Button>

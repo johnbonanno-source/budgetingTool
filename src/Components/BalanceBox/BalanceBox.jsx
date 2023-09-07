@@ -1,12 +1,14 @@
 import classes from './BalanceBox.module.css';
+import { Button, Box } from "@mui/material/";
+import { InputComponent } from '../../components';
 
 function BalanceBox({ balance, setBalance }) {
   const handleButtonClick = (event) => {
     const buttonName = event.target.name;
-    const inputField = document.getElementById(
+    const InputComponentField = document.getElementById(
       buttonName === 'deposit' ? 'incrementBalance' : 'decrementBalance'
     );
-    const delta = parseInt(inputField.value);
+    const delta = parseInt(InputComponentField.value);
     if (typeof delta === 'number' && !isNaN(delta)) {
       setBalance(buttonName === 'deposit' ? balance + delta : balance - delta);
     }
@@ -14,27 +16,24 @@ function BalanceBox({ balance, setBalance }) {
 
   return (
     <>
-      <div className={classes.balanceBoxContainer}>
-        <h1 className={classes.balanceAmount}>Current Balance: {balance}</h1>
-        <div className={classes.balanceBox}>
-          <input className={classes.balanceInput} id={'incrementBalance'} />
-          <input className={classes.balanceInput} id={'decrementBalance'} />
-          <button
-            className={classes.balanceButton}
+      <div className={classes.box}>
+        
+          <InputComponent className={classes.balanceInputComponent} id={'incrementBalance'} />
+          <Button
             name='deposit'
             onClick={handleButtonClick}
           >
             Deposit
-          </button>
-          <button
-            className={classes.balanceButton}
+          </Button>
+          <InputComponent className={classes.balanceInputComponent} id={'decrementBalance'} />
+          <Button
             name='withdraw'
             onClick={handleButtonClick}
           >
             Withdraw
-          </button>
+          </Button>
         </div>
-      </div>
+
     </>
   );
 }

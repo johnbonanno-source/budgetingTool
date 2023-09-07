@@ -1,6 +1,6 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { GridComponent,LoginPage,LandingPage, RootLayout, RegistrationPage, ErrorPage, BalanceBox, BudgetPage } from './components';
+import { GridComponent,Login,LandingPage, RootLayout, RegistrationPage, ErrorPage, BalanceBox, BudgetPage } from './components';
 
 const router = createBrowserRouter([{
 
@@ -9,8 +9,8 @@ const router = createBrowserRouter([{
     children:[
       { path: '/', element: <LandingPage /> },
       { path: '/budget', element: <BudgetPage /> },
-      { path:'/register', element: <RegistrationPage /> },
-      { path:'/login', element: <LoginPage /> },
+      // { path:'/register', element: <RegistrationPage /> },
+      { path:'/login', element: <Login /> },
       { path:'/grid', element: <GridComponent /> },
     ], 
   },
