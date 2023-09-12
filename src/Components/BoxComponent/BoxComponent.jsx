@@ -1,10 +1,20 @@
 import React from 'react';
-import classes from './Box.module.css';
 import { Box } from '@mui/material';
 
 const BoxComponent = (props) => {
   return (
-    <Box {...props} className={classes.box}>
+    <Box
+      {...props}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        ...props.sx,
+      }}
+    >
       {props.children}
     </Box>
   );

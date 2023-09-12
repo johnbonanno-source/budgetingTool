@@ -1,8 +1,21 @@
-import Input from "@mui/material/Input";
-import classes from './InputComponent.module.css';
+import React from 'react';
+import Input from '@mui/material/Input';
+
 const InputComponent = (props) => {
   const inputProps = { ...props, disableUnderline: true };
-  return <Input className={classes.input} {...inputProps} />;
+  return (
+    <Input
+      {...inputProps}
+      sx={{
+        bgcolor: 'white',
+        borderRadius: '5px',
+        '.input': {
+          boxSizing: 'border-box',
+          fontSize: '10px',
+        },
+      }}
+    />
+  );
 };
 
 export default InputComponent;

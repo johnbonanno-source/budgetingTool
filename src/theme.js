@@ -6,7 +6,8 @@ const themeOptions = createTheme({
     palette: {
       mode: 'light',
       primary: {
-        main: '#718F94',
+        main: 
+        '#dde4e5', // green: #718f94;
       },
       secondary: {
         main: '#545775',
@@ -26,11 +27,14 @@ const themeOptions = createTheme({
       success: {
         main: '#426146',
       },
-      warning: {
-        main: '#CA5310',
+      navbar: {
+        main: '#12263A;',
       },
-      error: {
-        main: '#8F250C',
+      footer: {
+        main: '#12263A;',
+      },
+      green: {
+        main: '#718f94; ',
       },
     },
     shape: {

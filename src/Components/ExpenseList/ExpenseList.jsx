@@ -1,11 +1,11 @@
-import React from 'react';
-import ExpenseItem from '../ExpenseTracker/ExpenseItem';
+import React from "react";
+import ExpenseItem from "../ExpenseTracker/ExpenseItem";
 function ExpenseList({ expenses }) {
   return (
     <>
-      {expenses.map((expense) => (
+      {expenses.map((expense,index) => (
         <ExpenseItem
-          key={expense.id}
+          key={index}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}

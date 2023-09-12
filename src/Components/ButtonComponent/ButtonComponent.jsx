@@ -1,16 +1,25 @@
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
+
 const ButtonComponent = (props) => {
-  const ButtonProps = { ...props };
+  const theme = useTheme();
+  const bgColor = props.bgColor || theme.palette.lightBlue.main;
+
   return (
     <Button
       type={props.type}
       onClick={props.onClick}
-      color="secondary"
+      onSubmit={props.onSubmit}
+      name={props.name}
+     
       sx={{
-        bgcolor: "white",
-        ":hover": {
-          bgcolor: "#545775",
-          color: "white",
+        padding: '4px',
+        bgcolor: bgColor,
+        color: 'black',
+        width: props.width || 'auto',
+        ':hover': {
+          bgcolor: `${theme.palette.secondary.main}`,
+          color: 'white',
         },
       }}
     >
