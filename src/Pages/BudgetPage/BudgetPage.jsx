@@ -154,9 +154,7 @@ function BudgetPage() {
     <>
       <BoxComponent>
         <img src={LCC} alt="pic" />
-        <Grid container justifyContent="center" spacing={2}>
-        <Grid item xs={12} key={index}>
-
+        
         <Box
           sx={{
             backgroundColor: `${theme.palette.green.main}`,
@@ -176,9 +174,6 @@ function BudgetPage() {
           </Grid>
         </Box>
 
-</Grid>
-<Grid item xs={12} key={index}>
-</
         <Box
           sx={{
             backgroundColor: `${theme.palette.green.main}`,
