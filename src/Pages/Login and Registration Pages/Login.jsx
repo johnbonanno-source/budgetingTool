@@ -26,7 +26,7 @@ const Login = () => {
       console.log('already logged in');
       navigate('/home');
     }
-  }, []);
+  }, [navigate, tokenPrecheck]);
 
   const [credentials, setCredentials] = useState({
     username: '',

@@ -1,7 +1,6 @@
 import { BsCreditCard2Back } from 'react-icons/bs';
 import LCC from '../../Assets/LCC.jpg';
 import classes from './LandingPage.module.css';
-import axios from 'axios';
 import { useEffect } from 'react';
 
 const LandingPage = () => {

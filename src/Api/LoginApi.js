@@ -13,8 +13,6 @@ const addLoginHandler = async (username, password) => {
       throw new Error('Login failed');
     }
     
-    const responseData = await response.json();
-
     const token = 'Behavior Token';
     return token;
   } catch (error) {

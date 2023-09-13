@@ -1,7 +1,6 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Login,LandingPage, RootLayout, RegistrationPage, ErrorPage, BalanceBox, BudgetPage } from './components';
-import ExpenseForm from './Components/ExpenseForm/ExpenseForm';
+import { Login,LandingPage, RootLayout, ErrorPage, BudgetPage } from './components';
 import DatePicker from './Components/DatePickerComponent/DatePickerComponent'
 const router = createBrowserRouter([{
 
@@ -10,7 +9,6 @@ const router = createBrowserRouter([{
     children:[
       { path: '/', element: <LandingPage /> },
       { path: '/budget', element: <BudgetPage /> },
-      // { path:'/register', element: <RegistrationPage /> },
       { path:'/login', element: <Login /> },
       { path:'/date', element: <DatePicker /> },
 

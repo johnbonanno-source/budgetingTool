@@ -1,3 +1,7 @@
 {
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Monokai",
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.preferences.quoteStyle": "single",
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true
 }

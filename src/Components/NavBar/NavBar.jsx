@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import addLogoutHandler from '../../Api/LogoutApi';
-import { useTheme } from '@mui/material/styles';
 import { BsCreditCard2Back } from 'react-icons/bs';
 import classes from './NavBar.module.css';
 import {
@@ -15,7 +14,6 @@ const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [forceRender, setForceRender] = useState(false);
   const location = useLocation();
-  const theme = useTheme();
 
   useEffect(() => {
     const token = localStorage.getItem('accesstoken');
@@ -35,7 +33,6 @@ const NavBar = () => {
   return (
     <div className={classes.fullSize}>
         <AppBar position='static' sx={{
-        // backgroundColor: `${theme.palette.navbar.main}`,
         top: 0,
         width: '100%',
       }}>
@@ -55,7 +52,6 @@ const NavBar = () => {
             </ButtonGroup>
           </Toolbar>
         </AppBar>
-      {/* </Box> */}
     </div>
   );
 };

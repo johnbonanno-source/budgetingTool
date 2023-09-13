@@ -1,66 +1,106 @@
 import React, { useState } from 'react';
-import classes from './ExpenseForm.module.css';
-import 'react-datepicker/dist/react-datepicker.css';
-import { InputComponent, ButtonComponent, DatePickerComponent }  from '../../components';
-const ExpenseForm = ({ handleSetExpense }) => {
+import { Grid } from '@mui/material';
+import {
+  InputComponent,
+  ButtonComponent,
+  DatePickerComponent,
+} from '../../components';
 
-
+const ExpenseForm = ({ setExpenses }) => {
   const [expense, setExpense] = useState({
     title: '',
-    amount: '',
+    cost: '',
     date: new Date(),
+    id: '',
   });
 
   const handleChange = (name, value) => {
-    setExpense({ ...expense, [name]: value });
-    console.log(expense)
-    
+    if (name === 'date' && value instanceof Date && !isNaN(value)) {
+      const newDate = new Date(value);
+      setExpense({ ...expense, [name]: newDate });
+    } else {
+      setExpense({ ...expense, [name]: value });
+    }
   };
 
-  const handleSubmit = async (expense) => {
-    
-    console.log('expense item: ');
-    console.log('expense');
-    handleSetExpense(expense);
+  const handleSubmit = () => {
+    const newExpense = {
+      id: Date.now().toString(), // Generate a unique ID
+      title: expense.title,
+      cost: expense.cost,
+      date: expense.date,
+    };
+
+    setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
+
+    setExpense({
+      title: '',
+      cost: '',
+      date: new Date(),
+      id: '',
+    });
   };
+
+  const formItems = [
+    {
+      label: 'Title',
+      component: (
+        <InputComponent
+          type='text'
+          name='title'
+          value={expense.title}
+          onChange={(e) => handleChange(e.target.name, e.target.value)}
+        />
+      ),
+    },
+    {
+      label: 'Cost',
+      component: (
+        <InputComponent
+          type='text'
+          name='cost'
+          value={expense.cost}
+          onChange={(e) => handleChange(e.target.name, e.target.value)}
+        />
+      ),
+    },
+    {
+      label: 'Date',
+      component: (
+        <DatePickerComponent
+          type='date'
+          name='date'
+          value={expense.date}
+          onChange={(date) => handleChange('date', date)}
+        />
+      ),
+    },
+    {
+      label: 'Submit',
+      component: (
+        <ButtonComponent
+          bgColor='white'
+          type='button'
+          onClick={handleSubmit}
+          width='100%'
+        >
+          Add Expense
+        </ButtonComponent>
+      ),
+    },
+  ];
 
   return (
-    <>
-   
-      <form className={classes.formStyle} onSubmit={handleSubmit}>
-        {/* <div className={classes.inputContainer}> */}
-          <InputComponent
-            type='text'
-            name='title'
-            value={expense.title}
-            className={classes.expenseInput}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-          />
-        {/* </div> */}
-        <div className={classes.inputContainer}>
-          <InputComponent
-            type='text'
-            name='amount'
-            value={expense.amount}
-            className={classes.expenseInput}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-          />
-        </div>
-        {/* <div className={classes.inputContainer}> */}
-          <DatePickerComponent
-            selected={expense.date}
-            onChange={(date) => handleChange('date', date)}
-          />
-        {/* </div> */}
-      {/* <div className={classes.inputContainer}> */}
-        <ButtonComponent type='submit'>
-          Submit
-        </ButtonComponent>
-      {/* </div> */}
-      </form>
-     
-
-    </>
+    <Grid container justifyContent='center' spacing={2}>
+      {formItems.map((item) => (
+        <React.Fragment key={item.label}>
+          <Grid item xs={3}>
+            <p>{item.label}</p>
+            {item.component}
+          </Grid>
+        </React.Fragment>
+      ))}
+    </Grid>
   );
 };
 

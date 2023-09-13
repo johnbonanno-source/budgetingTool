@@ -1,10 +1,9 @@
-import classes from './BalanceBox.module.css';
-import { Button, Box } from '@mui/material/';
-import { InputComponent } from '../../components';
-import TextField from '@mui/material/TextField';
+import React from 'react';
+import { Grid } from '@mui/material';
+import { InputComponent, ButtonComponent } from '../../components';
 
+const BalanceBox = ({ balance, setBalance }) => {
 
-function BalanceBox({ balance, setBalance }) {
   
   const handleButtonClick = (event) => {
     const buttonName = event.target.name;
@@ -17,31 +16,41 @@ function BalanceBox({ balance, setBalance }) {
     }
   };
 
+  const gridItems = [
+    { label: 'Deposit', component: <InputComponent id={'incrementBalance'} /> },
+    {
+      label: 'Withdraw',
+      component: <InputComponent id={'decrementBalance'} />,
+    },
+    {
+      component: (
+        <ButtonComponent name='deposit' onClick={handleButtonClick}>
+          Deposit
+        </ButtonComponent>
+      ),
+    },
+    {
+      component: (
+        <ButtonComponent name='withdraw' onClick={handleButtonClick}>
+          Withdraw
+        </ButtonComponent>
+      ),
+    },
+  ];
+
   return (
     <>
-      {/* <div className={classes.box}>
-        <Box className={classes.BoxColor}>
-          <InputComponent
-            className={classes.balanceInputComponent}
-            id={'incrementBalance'}
-          />
-          <Button name='deposit' onClick={handleButtonClick}>
-            Deposit
-          </Button> */}
-          <InputComponent
-            className={classes.balanceInputComponent}
-           
-            id={'decrementBalance'}
-          />
-          
-          <Button></Button>
-          {/* <Button name='withdraw' onClick={handleButtonClick}>
-            Withdraw
-          </Button>
-        </Box>
-      </div> */}
+      <h1>Balance: {balance} </h1>
+      <Grid container justifyContent='center' spacing={2}>
+        {gridItems.map((item, index) => (
+          <Grid item xs={6} key={index}>
+            <h6>{item.label}</h6>
+            {item.component}
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
-}
+};
 
 export default BalanceBox;
