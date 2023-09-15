@@ -26,20 +26,22 @@ const ExpenseGrid = ({ expenses }) => {
     },
   ];
 
+  
   const rows = expenses.map((expense) => ({
-    id: expense.id,
+    id: expense._id,
     title: expense.title,
     cost: expense.cost,
-    date: expense.date.toISOString().split('T')[0],
+    date: new Date(expense.date).toLocaleDateString(),
   }));
 
+  
   const data = {
     columns,
     rows,
   };
 
   return (
-    <div style={{ height: 350, width: '100%', paddingTop: '2rem' }}>
+    <div style={{ height: 'auto', width: '100%', paddingTop: '2rem', marginBottom: '5rem' }}>
       <DataGrid {...data} />
     </div>
   );

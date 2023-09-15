@@ -7,11 +7,15 @@ const BoxComponent = (props) => {
       {...props}
       sx={{
         display: 'flex',
-        flexDirection: 'column',
+        // flexDirection: 'row',
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
         minHeight: '100vh',
+        flex: 1,
+        
+        // marginTop: '0px',
+
         ...props.sx,
       }}
     >

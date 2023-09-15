@@ -34,20 +34,17 @@ const Login = () => {
   });
 
   const credentialUpdate = (event) => {
-    console.log('called');
     const { name, value } = event.target;
     setCredentials({ ...credentials, [name]: value });
   };
 
   const handleLogin = async (event) => {
-    console.log('called');
     event.preventDefault();
     const token = await addLoginHandler(
       credentials.username,
       credentials.password
     );
     if (token) {
-      console.log(token);
       localStorage.setItem('accesstoken', token);
       navigate('/');
     }

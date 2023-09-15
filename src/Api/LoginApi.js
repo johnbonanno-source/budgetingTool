@@ -1,6 +1,5 @@
 const addLoginHandler = async (username, password) => {
   try {
-    console.log('inhandle')
     const response = await fetch('http://localhost:2001/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),

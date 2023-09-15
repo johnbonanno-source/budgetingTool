@@ -6,31 +6,48 @@ import LCC from '../../Assets/LCC.jpg';
 import { BoxComponent } from '../../components';
 import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
+import ExpensesApi from '../../Api/ExpensesApi';
+import { useEffect } from 'react';
 
 function BudgetPage() {
   const [balance, setBalance] = useState(10);
+  
   const [expenses, setExpenses] = useState([
     {
-      id: 'e1',
-      title: 'Toilet Paper',
-      cost: 94.12,
-      date: new Date(2020, 7, 14),
+      cost: 94.122,
+      date: new Date(),
       isReoccuring: false,
+      title: 'Demo Expense',
+      _id: 'e1',
     },
   ]);
 
   const theme = useTheme();
 
+  useEffect(() => {
+     const fetchExpenses = async () =>{
+      try {
+        const response = await ExpensesApi('getExpenses').get(); // Use your ExpensesApi to fetch data
+        setExpenses(response); 
+      } catch (error) {
+        console.error('Error fetching expenses:', error);
+      }
+    }
+    fetchExpenses();
+  }, []);
+
   return (
     <>
-      <BoxComponent>
+      <BoxComponent >
+
         <img src={LCC} alt='pic' />
         <Box
           sx={{
             backgroundColor: `${theme.palette.green.main}`,
             padding: '2% 2%',
             borderRadius: '12px',
-            gap: '1rem',
+            maxWidth: '1000px',
+            overflow: 'auto',
           }}
         >
           <BalanceBox balance={balance} setBalance={setBalance} />
