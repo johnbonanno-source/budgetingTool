@@ -28,23 +28,22 @@ const addLoginHandler = async (username, password) => {
 
 const addLogoutHandler = async () => {
     try {
-        const response = await axios.post(`${apiBaseUrl}/logout`, null, {
-            headers: {
-                'Content-Type': 'application/json',
+      const response = await fetch('http://localhost:2001/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-    });
-    
-    if (response.status !== 200) {
+      });
+      if (!response.ok) {
         throw new Error('Logout failed');
+      }
+      const responseData = await response.json();
+  
+      return responseData;
+    } catch (error) {
+      console.error('Login error:', error.message);
     }
-    
-    const responseData = response.data;
-    
-    return responseData;
-} catch (error) {
-    console.error('Logout error:', error.message);
-    }
-};
+  };
 
 const getSessionTokenById = async () => {
   try {
