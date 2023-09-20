@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import addLoginHandler from '../../Api/LoginApi';
+import { addLoginHandler } from '../../Api/SessionTokenApi';
 import {
   InputComponent,
   ButtonComponent,

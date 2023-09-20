@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import addLogoutHandler from '../../Api/LogoutApi';
+import { addLogoutHandler } from '../../Api/SessionTokenApi';
 import { BsCreditCard2Back } from 'react-icons/bs';
 import {
   AppBar,
@@ -8,7 +8,6 @@ import {
   Typography,
   Button,
   ButtonGroup,
-  Box,
 } from '@mui/material';
 
 const NavBar = () => {

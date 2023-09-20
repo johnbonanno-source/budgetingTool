@@ -16,9 +16,7 @@ const addBudgetItemHandler = async ( budgetObject ) => {
       if (!response.ok) {
         throw new Error('Budget item insertion failed');
       }
-      
       const responseData = await response.json();
-  
     } catch (error) {
       console.error('Login error:', error.message);
     }
