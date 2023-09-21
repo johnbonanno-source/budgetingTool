@@ -7,11 +7,11 @@ import { BoxComponent } from '../../components';
 import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
 import ExpensesApi from '../../Api/ExpensesApi';
+import { getSessionTokenById } from '../../Api/SessionTokenApi';
 import { useEffect } from 'react';
 
 function BudgetPage() {
   const [balance, setBalance] = useState(10);
-  
   const [expenses, setExpenses] = useState([
     {
       cost: 94.122,
@@ -25,21 +25,31 @@ function BudgetPage() {
   const theme = useTheme();
 
   useEffect(() => {
-     const fetchExpenses = async () =>{
-      try {
-        const response = await ExpensesApi('getExpenses').get(); // Use your ExpensesApi to fetch data
-        setExpenses(response); 
-      } catch (error) {
-        console.error('Error fetching expenses:', error);
+    const fetchExpenses = async () => {
+      const token = localStorage.getItem('accesstoken');
+      if (token) {
+        getSessionTokenById()
+          .then((userId) => {
+            const url = 'getExpenses?userId=' + userId;
+            ExpensesApi(url).get()
+              .then((response) => {
+                setExpenses(response);
+              })
+              .catch((error) => {
+                console.error('Error fetching expenses:', error);
+              });
+          })
+          .catch((error) => {
+            console.error('Error fetching userId:', error);
+          });
       }
-    }
+    };
     fetchExpenses();
   }, []);
 
   return (
     <>
-      <BoxComponent >
-
+      <BoxComponent>
         <img src={LCC} alt='pic' />
         <Box
           sx={{

@@ -23,7 +23,6 @@ const Login = () => {
   const tokenPrecheck = localStorage.getItem('accesstoken');
   useEffect(() => {
     if (tokenPrecheck) {
-      console.log('already logged in');
       navigate('/home');
     }
   }, [navigate, tokenPrecheck]);

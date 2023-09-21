@@ -27,7 +27,6 @@ const NavBar = () => {
   const handleLogout = async () => {
     localStorage.removeItem('accesstoken');
     try {
-      console.log("called");
       await addLogoutHandler();
       setForceRender((prev) => !prev);
     } catch (error) {
