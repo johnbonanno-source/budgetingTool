@@ -40,7 +40,7 @@ function BudgetPage() {
     <>
       <BoxComponent >
 
-        <img src={LCC} alt='pic' />
+        {/* <img src={LCC} alt='pic' /> */}
         <Box
           sx={{
             backgroundColor: `${theme.palette.green.main}`,

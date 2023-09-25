@@ -19,3 +19,9 @@ p {
 h4{
   text-align: center;
 }
+body {
+  background-image: url('./Assets/LCC.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}

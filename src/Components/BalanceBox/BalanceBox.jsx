@@ -3,8 +3,6 @@ import { Grid } from '@mui/material';
 import { InputComponent, ButtonComponent } from '../../components';
 
 const BalanceBox = ({ balance, setBalance }) => {
-
-  
   const handleButtonClick = (event) => {
     const buttonName = event.target.name;
     const InputComponentField = document.getElementById(

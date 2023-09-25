@@ -8,18 +8,18 @@ import {
   Typography,
   Button,
   ButtonGroup,
-  Box,
 } from '@mui/material';
 
 const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [forceRender, setForceRender] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const token = localStorage.getItem('accesstoken');
     setIsLoggedIn(!!token);
-  }, [forceRender]);
+  }, [forceRender, setIsLoggedIn]);
 
   useEffect(() => {
     setForceRender((prev) => !prev);

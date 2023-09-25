@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <>
       <BoxComponent>
-        <img src={LCC} alt='pic' />
+        {/* <img src={LCC} alt='pic' /> */}
         <Formik
           validationSchema={schema}
           initialValues={{ username: '', password: '' }}

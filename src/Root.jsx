@@ -1,11 +1,12 @@
-import { Outlet } from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
-import NavBar from './Components/NavBar/NavBar';
-const RootLayout = () => {
+import { Outlet } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
+import NavBar from "./Components/NavBar/NavBar";
+
+const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <>
       <div>
-        <NavBar />
+        <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  />
         <Outlet />
         <Footer />
       </div>

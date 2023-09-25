@@ -5,8 +5,7 @@ import BoxComponent from '../../Components/BoxComponent/BoxComponent';
 const LandingPage = () => {
   return (
     <>
-      <BoxComponent minHeight='0vh'>
-        <img src={LCC} alt='pic' />
+      <BoxComponent minHeight='100vh'>
         <div>
 
         <h1 className={classes.logo} style={{ flexShrink: 2, paddingTop: 0 }}>
