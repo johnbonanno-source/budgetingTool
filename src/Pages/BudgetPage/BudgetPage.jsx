@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
 import { BalanceBox } from '../../components';
-import LCC from '../../Assets/LCC.jpg';
 import { BoxComponent } from '../../components';
 import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
@@ -11,7 +10,7 @@ import { useEffect } from 'react';
 
 function BudgetPage() {
   const [balance, setBalance] = useState(10);
-  
+
   const [expenses, setExpenses] = useState([
     {
       cost: 94.122,
@@ -25,22 +24,20 @@ function BudgetPage() {
   const theme = useTheme();
 
   useEffect(() => {
-     const fetchExpenses = async () =>{
+    const fetchExpenses = async () => {
       try {
         const response = await ExpensesApi('getExpenses').get(); // Use your ExpensesApi to fetch data
-        setExpenses(response); 
+        setExpenses(response);
       } catch (error) {
         console.error('Error fetching expenses:', error);
       }
-    }
+    };
     fetchExpenses();
   }, []);
 
   return (
     <>
-      <BoxComponent >
-
-        {/* <img src={LCC} alt='pic' /> */}
+      <BoxComponent>
         <Box
           sx={{
             backgroundColor: `${theme.palette.green.main}`,

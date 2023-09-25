@@ -8,7 +8,6 @@ import {
   ButtonComponent,
   BoxComponent,
 } from '../../components';
-import LCC from '../../Assets/LCC.jpg';
 import './Login.css';
 
 const schema = Yup.object().shape({
@@ -53,7 +52,6 @@ const Login = () => {
   return (
     <>
       <BoxComponent>
-        {/* <img src={LCC} alt='pic' /> */}
         <Formik
           validationSchema={schema}
           initialValues={{ username: '', password: '' }}
