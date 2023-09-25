@@ -1,6 +1,7 @@
 import { BsCreditCard2Back } from 'react-icons/bs';
 import classes from './LandingPage.module.css';
 import BoxComponent from '../../Components/BoxComponent/BoxComponent';
+
 const LandingPage = () => {
   return (
     <>

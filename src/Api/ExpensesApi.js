@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:2001';
+const BASE_URL = 'http://localhost:2001/expenses';
 
 const ExpensesApi = (route) => {
   

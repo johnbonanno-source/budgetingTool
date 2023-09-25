@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import addLoginHandler from '../../Api/LoginApi';
+import { addLoginHandler } from '../../Api/SessionTokenApi';
 import {
   InputComponent,
   ButtonComponent,
@@ -22,7 +22,6 @@ const Login = () => {
   const tokenPrecheck = localStorage.getItem('accesstoken');
   useEffect(() => {
     if (tokenPrecheck) {
-      console.log('already logged in');
       navigate('/home');
     }
   }, [navigate, tokenPrecheck]);
@@ -39,10 +38,12 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    console.log("login called");
     const token = await addLoginHandler(
       credentials.username,
       credentials.password
     );
+    console.log(token);
     if (token) {
       localStorage.setItem('accesstoken', token);
       navigate('/');
