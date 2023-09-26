@@ -70,4 +70,21 @@ const getSessionTokenById = async () => {
   }
 };
 
-export { addLoginHandler, getSessionTokenById, addLogoutHandler };
+const validateSessionToken = async () => {
+  try {
+    const response = await axios.get(`${apiBaseUrl}/validateToken`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    });
+
+    if (response.status !== 200) {
+      throw new Error('Unable to fetch a valid session token');
+    }
+    return response.data.valid;
+  } catch (error) {
+    console.error('Error validating session token: ', error.message);
+  }
+};
+export { addLoginHandler, getSessionTokenById, addLogoutHandler, validateSessionToken };

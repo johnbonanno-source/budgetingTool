@@ -6,7 +6,6 @@ import { BoxComponent } from '../../components';
 import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
 import ExpensesApi from '../../Api/ExpensesApi';
-import { getSessionTokenById } from '../../Api/SessionTokenApi';
 import { useEffect } from 'react';
 
 function BudgetPage() {
