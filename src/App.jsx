@@ -1,23 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Login, LandingPage, RootLayout, ErrorPage, BudgetPage } from './components';
-import DatePicker from './Components/DatePickerComponent/DatePickerComponent';
-
+import {
+  Login,
+  LandingPage,
+  RootLayout,
+  ErrorPage,
+  BudgetPage,
+} from './components';
+import { validateSessionToken } from './Api/SessionTokenApi';
 const App = () => {
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    setIsLoggedIn(validateSessionToken());
 
-  const router = createBrowserRouter([
-    {
-      path: '/', element: <RootLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />,
-      errorElement: <ErrorPage />,
-      children: [
-        { path: '/', element: <LandingPage /> },
-        { path: '/budget', element: <BudgetPage /> },
-        { path: '/login', element: <Login /> },
-        { path: '/date', element: <DatePicker /> },
-      ],
-    },
-  ]);
+  },[]);
+  console.log(isLoggedIn);
+  let router = null;
+
+  // if (isLoggedIn) {
+    router = createBrowserRouter([
+      {
+        path: '/',
+        element: (
+          <RootLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        ),
+        errorElement: <ErrorPage />,
+        children: [
+          { path: '/', element: <LandingPage /> },
+          { path: '/budget', element: <BudgetPage /> },
+          { path: '/login', element: <Login /> },
+        ],
+      },
+    ]);
 
   return (
     <RouterProvider router={router}>

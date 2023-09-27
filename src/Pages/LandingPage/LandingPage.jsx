@@ -1,25 +1,47 @@
 import { BsCreditCard2Back } from 'react-icons/bs';
 import classes from './LandingPage.module.css';
 import BoxComponent from '../../Components/BoxComponent/BoxComponent';
-import {validateSessionToken} from '../../Api/SessionTokenApi';
+import { validateSessionToken } from '../../Api/SessionTokenApi';
+import { Box } from '@mui/system';
+import { useTheme } from '@emotion/react';
+import { Typography } from '@mui/material';
 
-const validateSessionTokenHelper = async() => {
-  const isTheSessionTokenValid = await validateSessionToken();
-  console.log(isTheSessionTokenValid);
-}
+
 
 const LandingPage = () => {
-  validateSessionTokenHelper();
+  const theme = useTheme();
+  
 
   return (
     <>
       <BoxComponent minHeight='100vh'>
-        <div>
-          <h1 className={classes.logo} style={{ flexShrink: 2, paddingTop: 0 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            flex: 0.4, 
+            width: '100%',
+            borderRadius: '14px',
+            bgcolor: `${theme.palette.green.main}`,
+          }}
+        >
+          <Typography
+            variant='h3'
+            component='div'
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              flex: '0.6',
+              gap: '10px',
+              textAlign: 'center', 
+            }}
+          >
             BudgetHero <BsCreditCard2Back />
-          </h1>
+          </Typography>
+
           <h1 className={classes.logo}>Let's Get that budget, balanced.</h1>
-        </div>
+        </Box>
       </BoxComponent>
     </>
   );

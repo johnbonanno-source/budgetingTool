@@ -12,6 +12,8 @@ const InputComponent = (props) => {
         '.input': {
           boxSizing: 'border-box',
           fontSize: '10px',
+          width: '100%',
+          flex: 1,
         },
       }}
     />
