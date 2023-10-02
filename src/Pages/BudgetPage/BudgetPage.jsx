@@ -7,6 +7,7 @@ import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
 import ExpensesApi from '../../Api/ExpensesApi';
 import { useEffect } from 'react';
+import BalanceApi from '../../Api/BalanceApi';
 
 function BudgetPage() {
   const [balance, setBalance] = useState(10);
@@ -26,10 +27,16 @@ function BudgetPage() {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await ExpensesApi('getExpenses').get();
-        setExpenses(response);
+        const expensesFromApi = await ExpensesApi('getExpenses').get();
+        setExpenses(expensesFromApi);
       } catch (error) {
         console.error('Error fetching expenses:', error);
+      }
+      try{
+      const balanceFromApi = await BalanceApi('getBalance').get();
+      setBalance(balanceFromApi.balance);
+      } catch (error) {
+        console.error('Error fetching balances:', error);
       }
     };
     fetchExpenses();
@@ -43,8 +50,8 @@ function BudgetPage() {
             backgroundColor: `${theme.palette.green.main}`,
             padding: '2% 2%',
             borderRadius: '12px',
-            maxWidth: '1000px',
             overflow: 'auto',
+            marginTop: '6rem',
           }}
         >
           <BalanceBox balance={balance} setBalance={setBalance} />

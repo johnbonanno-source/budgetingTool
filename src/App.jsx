@@ -13,12 +13,9 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     setIsLoggedIn(validateSessionToken());
-
   },[]);
-  console.log(isLoggedIn);
+  
   let router = null;
-
-  // if (isLoggedIn) {
     router = createBrowserRouter([
       {
         path: '/',

@@ -51,7 +51,7 @@ const NavBar = () => {
             },
           }}
         >
-          BH <BsCreditCard2Back />
+          BudgetHero <BsCreditCard2Back />
         </Typography>
 
         <ButtonGroup variant='contained' aria-label='navbar button group'>

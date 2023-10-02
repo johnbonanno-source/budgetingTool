@@ -26,7 +26,6 @@ const ExpenseGrid = ({ expenses }) => {
     },
   ];
 
-  
   const rows = expenses.map((expense) => ({
     id: expense._id,
     title: expense.title,
@@ -34,7 +33,17 @@ const ExpenseGrid = ({ expenses }) => {
     date: new Date(expense.date).toLocaleDateString(),
   }));
 
-  
+  // Calculate the total cost
+  const totalCost = expenses.reduce((total, expense) => total + expense.cost, 0);
+
+  // Add a row for the total cost
+  rows.push({
+    id: 'total',
+    title: 'Total Spending:',
+    cost: totalCost,
+    date: '',
+  });
+
   const data = {
     columns,
     rows,

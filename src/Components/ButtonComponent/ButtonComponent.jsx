@@ -13,10 +13,11 @@ const ButtonComponent = (props) => {
       name={props.name}
      
       sx={{
-        padding: '4px',
         bgcolor: bgColor,
-        color: 'black',
-        width: props.width || 'auto',
+        borderRadius: '4px',
+        color: 'gray',
+        width: props.width || '100%',
+        padding: '16.5px',
         ':hover': {
           bgcolor: `${theme.palette.secondary.main}`,
           color: 'white',

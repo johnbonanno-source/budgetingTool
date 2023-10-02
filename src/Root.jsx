@@ -8,7 +8,7 @@ const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
       <div>
         <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  />
         <Outlet />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

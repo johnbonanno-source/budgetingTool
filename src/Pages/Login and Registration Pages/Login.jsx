@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { addLoginHandler } from '../../Api/SessionTokenApi';
-import {
-  InputComponent,
-  ButtonComponent,
-  BoxComponent,
-} from '../../components';
+import { ButtonComponent, BoxComponent } from '../../components';
 import './Login.css';
+import { TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const schema = Yup.object().shape({
-  username: Yup.string().required('Email is a required field'),
+  username: Yup.string().required('Username is a required field'),
   password: Yup.string()
     .required('Password is a required field')
     .min(6, 'Password must be at least 6 characters'),
@@ -26,23 +24,9 @@ const Login = () => {
     }
   }, [navigate, tokenPrecheck]);
 
-  const [credentials, setCredentials] = useState({
-    username: '',
-    password: '',
-  });
-
-  const credentialUpdate = (event) => {
-    const { name, value } = event.target;
-    setCredentials({ ...credentials, [name]: value });
-  };
-
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    console.log("login called");
-    const token = await addLoginHandler(
-      credentials.username,
-      credentials.password
-    );
+  const handleLogin = async (values) => {
+    console.log('login called');
+    const token = await addLoginHandler(values.username, values.password);
     console.log(token);
     if (token) {
       localStorage.setItem('accesstoken', token);
@@ -56,48 +40,59 @@ const Login = () => {
         <Formik
           validationSchema={schema}
           initialValues={{ username: '', password: '' }}
-          onSubmit={(values) => {
-            alert(JSON.stringify(values));
-          }}
+          onSubmit={handleLogin}
         >
-          {({ values, errors, touched, handleChange, handleBlur }) => (
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+          }) => (
             <div className='login'>
               <div className='form'>
-                <form noValidate onSubmit={handleLogin}>
-                  <span>Login</span>
-                  <InputComponent
-                    type='username'
+                <form noValidate onSubmit={handleSubmit}>
+                  <TextField
+                    type='text'
                     name='username'
-                    onChange={(e) => {
-                      handleChange(e);
-                      credentialUpdate(e);
-                    }}
+                    onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.username}
                     placeholder='Enter username'
                     id='username'
+                    label='Username'
+                    variant='outlined'
+                    fullWidth
+                    error={touched.username && !!errors.username}
+                    helperText={touched.username && errors.username}
+                    style={{ marginBottom: '16px' }}
                   />
-                  <p className='error'>
-                    {errors.username && touched.username && errors.username}
-                  </p>
-                  <InputComponent
+                  <TextField
                     type='password'
                     name='password'
-                    onChange={(e) => {
-                      handleChange(e);
-                      credentialUpdate(e);
-                    }}
+                    onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.password}
                     placeholder='Enter password'
                     id='password'
+                    label='Password'
+                    variant='outlined'
+                    fullWidth
+                    error={touched.password && !!errors.password}
+                    helperText={touched.password && errors.password}
+                    style={{ marginBottom: '8px' }}
+
                   />
-                  <p className='error'>
-                    {errors.password && touched.password && errors.password}
+
+                  <p style={{ marginBottom: '8px' }}>
+                    <Link to='/forgot-password'> Forgot your password? </Link>
                   </p>
-                  <ButtonComponent type='button' onClick={handleLogin}>
-                    Login
-                  </ButtonComponent>
+                  <ButtonComponent  type='submit'>Login</ButtonComponent>
+                  <p style={{ marginBottom: '8px' , marginTop: '8px' }}>
+                    Don't have an account? 
+                    <Link to='/forgot-password'> Register </Link>
+                  </p>
                 </form>
               </div>
             </div>
