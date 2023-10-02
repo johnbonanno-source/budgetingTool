@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 
 const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
@@ -8,7 +7,6 @@ const RootLayout = ({ isLoggedIn, setIsLoggedIn }) => {
       <div>
         <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  />
         <Outlet />
-        {/* <Footer /> */}
       </div>
     </>
   );

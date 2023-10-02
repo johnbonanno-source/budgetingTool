@@ -1,9 +1,6 @@
-import { BsCreditCard2Back } from 'react-icons/bs';
-import classes from './LandingPage.module.css';
 import BoxComponent from '../../Components/BoxComponent/BoxComponent';
 import { Box } from '@mui/system';
 import { useTheme } from '@emotion/react';
-import { Typography } from '@mui/material';
 import budget from '../../Assets/bh.jpg';
 
 const LandingPage = () => {

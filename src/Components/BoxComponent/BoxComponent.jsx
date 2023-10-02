@@ -13,7 +13,8 @@ const BoxComponent = (props) => {
         alignItems: 'center',
         justifyContent: 'center',
         minHeight:  '100vh',
-        padding: props.padding,
+        paddingTop: props.paddingTop,
+        paddingBottom: props.paddingBottom,
         ...props.sx,
       }}
     >

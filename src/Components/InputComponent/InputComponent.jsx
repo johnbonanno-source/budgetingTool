@@ -4,9 +4,10 @@ import TextField from '@mui/material/TextField';
 const InputComponent = (props) => {
   return (
     <TextField
+      id={props.id}
       InputProps={{
         sx: {
-          width: props.width || '100%',
+          minWidth: '100%',
           borderRadius: '4px',
           padding: 0,
         },
