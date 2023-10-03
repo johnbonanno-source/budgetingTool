@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import { InputComponent, ButtonComponent } from '../../components';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
@@ -15,7 +14,6 @@ const BalanceBox = ({ balance, setBalance }) => {
       setBalance(buttonName === 'deposit' ? balance + delta : balance - delta);
     }
   };
-
 
   const gridItems = [
     {

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Grid } from '@mui/material';
 import ExpensesApi from '../../Api/ExpensesApi';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
+import ReactDOM from "react-dom";
+import Button from '@mui/material/Button'; // Import Button from MUI
+import TextField from '@mui/material/TextField'; // Import TextField from MUI
+import { Grid } from '@mui/material';
 
 const ExpenseForm = ({ setExpenses }) => {
   const [expense, setExpense] = useState({
@@ -46,87 +48,87 @@ const ExpenseForm = ({ setExpenses }) => {
     {
       component: (
         <TextField
-          margin='normal'
+          margin="normal"
           required
           fullWidth
-          name='title'
-          type='text'
-          value={expense.title}
-          onChange={(e) => handleChange(e.target.name, e.target.value)}
+          name="title"
+          type="text"
           inputProps={{
             style: {
-              padding: 0,
-            },
+              height: '24px',
+              padding: 0
+            }
           }}
         />
-      ),
+      )
     },
     {
       component: (
         <TextField
-          margin='normal'
-          padding='0'
+          margin="normal"
+          padding="0"
           required
           fullWidth
-          name='cost'
-          type='text'
-          value={expense.cost}
-          onChange={(e) => handleChange(e.target.name, e.target.value)}
+          name="cost"
+          type="text"
           inputProps={{
             style: {
-              padding: 0,
-            },
+              height: '24px',
+              padding: 0
+            }
           }}
         />
-      ),
+      )
     },
     {
       component: (
         <TextField
-          margin='normal'
+          margin="normal"
           required
           fullWidth
-          name='date'
-          type='date'
-          value={expense.date}
-          onChange={(date) => handleChange('date', date)}
+          name="date"
+          type="date"
           inputProps={{
             style: {
-              padding: 0,
-            },
+              height: '24px',
+              padding: 0
+            }
           }}
         />
-      ),
+      )
     },
+
     {
-      label: 'submit',
       component: (
         <Button
-          margin='normal'
-          type='submit'
+          name="submit"
           fullWidth
+          style={{ height: '24px', marginTop:'7px' }} // Use style prop for inline styles
           variant='contained'
-          onClick={handleSubmit}
-          sx={{ padding:0 }}
         >
-          Submit
+          submit
         </Button>
-      ),
-    },
+      )
+    }
   ];
-
   return (
-    <Grid container justifyContent='center' alignItems='center' spacing={2}>
-      {formItems.map((item, index) => (
-        <React.Fragment key={index}>
-          <Grid item xs={3}>
-            <p>{item.label}</p>
-            {item.component}
-          </Grid>
-        </React.Fragment>
-      ))}
-    </Grid>
+    <>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+        direction="row"
+      >
+        
+          {formItems.map((item, index) => (
+            <Grid item xs={3}>
+              {item.component}
+            </Grid>
+          ))}
+      </Grid>
+    </>
   );
-};
+}
 
 export default ExpenseForm;

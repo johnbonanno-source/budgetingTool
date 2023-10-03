@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
-import { BalanceBox } from '../../components';
+import { BalanceBox, BoxComponent } from '../../components';
 import ExpenseForm from '../../Components/ExpenseForm/ExpenseForm';
 import ExpenseGrid from '../../Components/ExpenseGrid/ExpenseGrid';
 import ExpensesApi from '../../Api/ExpensesApi';
@@ -23,8 +22,6 @@ const BudgetPage = () => {
     },
   ]);
 
-  const theme = useTheme();
-
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
@@ -45,23 +42,25 @@ const BudgetPage = () => {
 
   return (
     <>
-      <Container component='main' maxWidth='md'>
-        <CssBaseline />
-
-        <Box
-          sx={{
-            backgroundColor: `#FFFF`,
-            padding: '2% 2%',
-            borderRadius: '12px',
-            overflow: 'auto',
-            marginTop: '6rem',
-          }}
-        >
-          <BalanceBox balance={balance} setBalance={setBalance} />
-          <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
-          <ExpenseGrid expenses={expenses} />
-        </Box>
-      </Container>
+      <BoxComponent>
+        <Container component='main' maxWidth='md'>
+          <CssBaseline />
+          <Box
+            sx={{
+              backgroundColor: `#FFFF`,
+              padding: '2% 2%',
+              borderRadius: '12px',
+              overflow: 'auto',
+              marginTop: '6rem',
+              marginBottom: '3rem',
+            }}
+          >
+            <BalanceBox balance={balance} setBalance={setBalance} />
+            <ExpenseForm expenses={expenses} setExpenses={setExpenses} />
+            <ExpenseGrid expenses={expenses} />
+          </Box>
+        </Container>
+      </BoxComponent>
     </>
   );
 };
