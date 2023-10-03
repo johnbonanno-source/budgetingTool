@@ -8,7 +8,6 @@ const BalanceApi = (route) => {
 
   const get = async () => {
     try {
-      console.log(url);
       const response = await axios.get(url, {withCredentials: true});
       return response.data;
     } catch (error) {

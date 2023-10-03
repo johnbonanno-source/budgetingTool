@@ -31,6 +31,7 @@ const ExpenseGrid = ({ expenses }) => {
     title: expense.title,
     cost: expense.cost,
     date: new Date(expense.date).toLocaleDateString(),
+    key: expense._id,
   }));
 
   // Calculate the total cost

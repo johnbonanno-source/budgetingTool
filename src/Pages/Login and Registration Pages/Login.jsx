@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -10,6 +11,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { BoxComponent } from '../../components';
+import { addLoginHandler } from '../../Api/SessionTokenApi';
 
 function Copyright(props) {
   return (
@@ -25,14 +27,24 @@ function Copyright(props) {
 }
 
 export default function Login() {
-  const handleSubmit = (event) => {
+
+  const navigate = useNavigate();
+  const tokenPrecheck = localStorage.getItem('accesstoken');
+  useEffect(() =>{
+    if(tokenPrecheck){
+      navigate('/')
+    }
+  }, [navigate,tokenPrecheck]);
+  
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    
-    console.log({
-      username: data.get('username'),
-      password: data.get('password'),
-    });
+    const token = await addLoginHandler(data.get('username'), data.get('password'));
+    console.log(data)
+    if(token){
+      localStorage.setItem('accesstoken', token);
+      navigate('/');
+    }
   };
 
   return (
@@ -49,7 +61,6 @@ export default function Login() {
             bgcolor: 'white',
             padding: '6px',
             borderRadius: '4px',
-
           }}
         >
 
