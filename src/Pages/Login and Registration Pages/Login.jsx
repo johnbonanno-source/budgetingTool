@@ -3,10 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -15,9 +12,14 @@ import { addLoginHandler } from '../../Api/SessionTokenApi';
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography
+      variant='body1'
+      color='text.secondary'
+      align='center'
+      {...props}
+    >
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color='inherit' href='/'>
         BudgetHero
       </Link>{' '}
       {new Date().getFullYear()}
@@ -27,30 +29,31 @@ function Copyright(props) {
 }
 
 export default function Login() {
-
   const navigate = useNavigate();
   const tokenPrecheck = localStorage.getItem('accesstoken');
-  useEffect(() =>{
-    if(tokenPrecheck){
-      navigate('/')
+  useEffect(() => {
+    if (tokenPrecheck) {
+      navigate('/');
     }
-  }, [navigate,tokenPrecheck]);
-  
+  }, [navigate, tokenPrecheck]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const token = await addLoginHandler(data.get('username'), data.get('password'));
-    console.log(data)
-    if(token){
+    const token = await addLoginHandler(
+      data.get('username'),
+      data.get('password')
+    );
+    console.log(data);
+    if (token) {
       localStorage.setItem('accesstoken', token);
       navigate('/');
     }
   };
 
   return (
-    
     <BoxComponent>
-      <Container component="main" maxWidth="xs">
+      <Container component='main' maxWidth='xs'>
         <CssBaseline />
         <Box
           sx={{
@@ -59,61 +62,65 @@ export default function Login() {
             flexDirection: 'column',
             alignItems: 'center',
             bgcolor: 'white',
-            padding: '6px',
+            padding: '25px',
             borderRadius: '4px',
           }}
         >
-
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box
+            component='form'
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              id="username"
-              label="Username"
-              name="username"
-              autoComplete="Username"
+              id='username'
+              label='Username'
+              name='username'
+              autoComplete='Username'
               autoFocus
             />
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
+              name='password'
+              label='Password'
+              type='password'
+              id='password'
+              autoComplete='current-password'
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+            <Link
+              href='#'
+              variant='body2'
+              underline='none'
+              sx={{ textAlign: 'left', display: 'block' }}
+            >
+              Forgot your password?
+            </Link>
             <Button
-              type="submit"
+              type='submit'
               fullWidth
-              variant="contained"
+              variant='contained'
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
+
+            <Link
+              href='#'
+              variant='body2'
+              underline='none'
+              sx={{ textAlign: 'left', display: 'block' }}
+            >
+              {"Don't have an account? Sign Up"}
+            </Link>
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
-      </BoxComponent>
-
+    </BoxComponent>
   );
 }
