@@ -22,7 +22,7 @@ const ExpenseForm = ({ setExpenses }) => {
   };
 
   const handleSubmit = async (event) => {
-    console.log("called")
+    console.log('called');
     const data = new FormData(event.currentTarget);
 
     const newExpense = {
@@ -59,7 +59,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
-              textAlign: 'center'
+              textAlign: 'center',
             },
           }}
         />
@@ -78,7 +78,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
-              textAlign: 'center'
+              textAlign: 'center',
             },
           }}
         />
@@ -87,7 +87,6 @@ const ExpenseForm = ({ setExpenses }) => {
     {
       component: (
         <TextField
-          label='date'
           margin='normal'
           required
           fullWidth
@@ -97,7 +96,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
-              textAlign: 'center'
+              textAlign: 'center',
             },
           }}
         />
@@ -106,11 +105,33 @@ const ExpenseForm = ({ setExpenses }) => {
 
     {
       component: (
+        // <Button
+        //   type='submit'
+        //   fullWidth
+        //   flex='1'
+        //   style={{
+        //     height: '24px',
+        //     marginTop: '7px',
+        //     flex: '1',
+        //     minWidth: 'auto',
+        //     maxWidth: '100%',
+        //   }}
+        //   variant='contained'
+        // >
         <Button
-          type='submit'
+          name='submit'
           fullWidth
-          style={{ height: '24px', marginTop: '7px' }} // Use style prop for inline styles
           variant='contained'
+          sx={{
+            height: '24px',
+            marginTop: '7px',
+            minWidth: 'auto',
+            maxWidth: '100%',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            // maxWidth: '100px',
+          }}
         >
           submit
         </Button>
@@ -125,7 +146,8 @@ const ExpenseForm = ({ setExpenses }) => {
         alignItems='center'
         spacing={2}
         direction='row'
-        component="form" onSubmit={handleSubmit}
+        component='form'
+        onSubmit={handleSubmit}
       >
         {formItems.map((item, index) => (
           <Grid item xs={3} key={index}>

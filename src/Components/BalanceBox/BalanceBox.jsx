@@ -104,7 +104,7 @@ const BalanceBox = ({ balance, setBalance }) => {
         <Box
           sx={{
             backgroundColor: `#FFFF`,
-            width: '60%',
+            // width: '60%',
           }}
         >
           <h1> Balance: {balance} </h1>
