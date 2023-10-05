@@ -49,10 +49,11 @@ const BudgetPage = () => {
             sx={{
               backgroundColor: `#FFFF`,
               padding: '2% 2%',
-              borderRadius: '12px',
+              borderRadius: '4px',
               overflow: 'auto',
               marginTop: '6rem',
               marginBottom: '3rem',
+              paddingTop: '0rem',
             }}
           >
             <BalanceBox balance={balance} setBalance={setBalance} />

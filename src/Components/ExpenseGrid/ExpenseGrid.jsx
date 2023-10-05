@@ -51,10 +51,13 @@ const ExpenseGrid = ({ expenses }) => {
   };
 
   return (
-    <div style={{ height: 'auto', width: '100%', paddingTop: '2rem', marginBottom: '5rem' }}>
+    <div style={{ height: 'auto', width: '100%' }}>
       <DataGrid {...data} />
     </div>
   );
 };
 
 export default ExpenseGrid;
+
+
+// https://codesandbox.io/s/react-material-ui-vcjmn?file=/src/App.js

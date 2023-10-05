@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import ExpensesApi from '../../Api/ExpensesApi';
-import ButtonComponent from '../ButtonComponent/ButtonComponent';
-import ReactDOM from 'react-dom';
 import Button from '@mui/material/Button'; // Import Button from MUI
 import TextField from '@mui/material/TextField'; // Import TextField from MUI
 import { Grid } from '@mui/material';
@@ -61,6 +59,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
+              textAlign: 'center'
             },
           }}
         />
@@ -79,6 +78,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
+              textAlign: 'center'
             },
           }}
         />
@@ -87,6 +87,7 @@ const ExpenseForm = ({ setExpenses }) => {
     {
       component: (
         <TextField
+          label='date'
           margin='normal'
           required
           fullWidth
@@ -96,6 +97,7 @@ const ExpenseForm = ({ setExpenses }) => {
             style: {
               height: '24px',
               padding: 0,
+              textAlign: 'center'
             },
           }}
         />
