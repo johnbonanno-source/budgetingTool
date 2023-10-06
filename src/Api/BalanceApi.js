@@ -22,10 +22,19 @@ const BalanceApi = (route) => {
       throw error;
     }
   };
+  const put = async (data) => {
+    try {
+      const response = await axios.put(url, data, { withCredentials: true });
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
 
   return {
     get,
     post,
+    put
   };
 };
 

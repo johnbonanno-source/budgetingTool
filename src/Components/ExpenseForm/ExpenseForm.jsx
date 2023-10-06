@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ExpensesApi from '../../Api/ExpensesApi';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Grid } from '@mui/material';
 
 const ExpenseForm = ({ setExpenses }) => {
-  const [expense, setExpense] = useState({
-    title: '',
-    cost: '',
-    date: new Date(),
-    id: '',
-  });
 
   const handleSubmit = async (event) => {
     console.log('called');
@@ -29,12 +23,6 @@ const ExpenseForm = ({ setExpenses }) => {
     } catch (error) {
       console.error('Error fetching expenses:', error);
     }
-    setExpense({
-      title: '',
-      cost: '',
-      date: new Date(),
-      id: '',
-    });
   };
 
   const formItems = [

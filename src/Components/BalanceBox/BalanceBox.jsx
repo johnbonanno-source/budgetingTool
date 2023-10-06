@@ -3,16 +3,27 @@ import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
+import BalanceApi from '../../Api/BalanceApi';
 
 const BalanceBox = ({ balance, setBalance }) => {
-  const handleButtonClick = (event) => {
-    const buttonName = event.target.name;
+  
+  const handleButtonClick = async (event) => {
+    let buttonName = event.target.name;
     const InputComponentField = document.getElementById(
       buttonName === 'deposit' ? 'incrementBalance' : 'decrementBalance'
     );
     const delta = parseInt(InputComponentField.value);
     if (typeof delta === 'number' && !isNaN(delta)) {
-      setBalance(buttonName === 'deposit' ? balance + delta : balance - delta);
+      let newBalance;
+      if (buttonName === 'deposit') {
+        newBalance = balance + delta;
+      } else {
+        newBalance = balance - delta;
+      }
+      const apiBalance = await BalanceApi('setBalance').put({
+        balance: newBalance,
+      });
+      setBalance(apiBalance.balance);
     }
   };
 
@@ -65,7 +76,6 @@ const BalanceBox = ({ balance, setBalance }) => {
             overflow: 'hidden',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
-            // maxWidth: '100px',
           }}
         >
           Deposit
@@ -75,7 +85,7 @@ const BalanceBox = ({ balance, setBalance }) => {
     {
       component: (
         <Button
-          name='deposit'
+          name='withdraw'
           fullWidth
           variant='contained'
           onClick={handleButtonClick}
@@ -83,7 +93,6 @@ const BalanceBox = ({ balance, setBalance }) => {
             overflow: 'hidden',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
-            // maxWidth: '100px',
           }}
         >
           Withdraw
@@ -105,7 +114,6 @@ const BalanceBox = ({ balance, setBalance }) => {
         <Box
           sx={{
             backgroundColor: `#FFFF`,
-            // width: '60%',
           }}
         >
           <h1> Balance: {balance} </h1>

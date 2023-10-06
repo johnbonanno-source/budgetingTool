@@ -11,7 +11,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 const BudgetPage = () => {
   const [balance, setBalance] = useState(10);
-
   const [expenses, setExpenses] = useState([
     {
       cost: 94.122,
@@ -27,6 +26,7 @@ const BudgetPage = () => {
       try {
         const expensesFromApi = await ExpensesApi('getExpenses').get();
         setExpenses(expensesFromApi);
+        
       } catch (error) {
         console.error('Error fetching expenses:', error);
       }
@@ -38,7 +38,7 @@ const BudgetPage = () => {
       }
     };
     fetchExpenses();
-  }, []);
+  }, [setBalance]);
 
   return (
     <>
