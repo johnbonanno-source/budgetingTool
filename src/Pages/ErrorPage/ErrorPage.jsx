@@ -27,7 +27,10 @@ const ErrorPage = () => {
         }}
       >
         <h1>{errorMessage}</h1>
-        <h2>This page was reached in error. Please make sure you are logged in or try again later.</h2>
+        <h2>
+          This page was reached in error. Please make sure you are logged in or
+          try again later.
+        </h2>
         <Link to='/'>Home</Link>
       </Box>
     </BoxComponent>

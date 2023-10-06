@@ -3,7 +3,6 @@ h1 {
   font-weight: 400;
   text-align: center;
   margin: 0;
-
 }
 
 p {
@@ -14,12 +13,12 @@ p {
   margin: 0 0 0;
 }
 
-h4{
+h4 {
   text-align: center;
 }
 body {
   background-image: url('./Assets/LCC.jpg');
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }

@@ -11,7 +11,6 @@ const ButtonComponent = (props) => {
       onClick={props.onClick}
       onSubmit={props.onSubmit}
       name={props.name}
-     
       sx={{
         bgcolor: bgColor,
         borderRadius: '4px',

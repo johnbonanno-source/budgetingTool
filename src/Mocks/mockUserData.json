@@ -1,12 +1,12 @@
 [
-    {
-      'user_id': 1,
-      'username': 'root',
-      'password': 'root'
-    },
-    {
-      'user_id': 2,
-      'username': 'user2',
-      'password': 'password2'
-    }
-  ]
+  {
+    "user_id": 1,
+    "username": "root",
+    "password": "root"
+  },
+  {
+    "user_id": 2,
+    "username": "user2",
+    "password": "password2"
+  }
+]

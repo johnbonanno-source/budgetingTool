@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ExpensesApi from '../../Api/ExpensesApi';
-import Button from '@mui/material/Button'; // Import Button from MUI
-import TextField from '@mui/material/TextField'; // Import TextField from MUI
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import { Grid } from '@mui/material';
 
 const ExpenseForm = ({ setExpenses }) => {
@@ -11,15 +11,6 @@ const ExpenseForm = ({ setExpenses }) => {
     date: new Date(),
     id: '',
   });
-
-  const handleChange = (name, value) => {
-    if (name === 'date' && value instanceof Date && !isNaN(value)) {
-      const newDate = new Date(value);
-      setExpense({ ...expense, [name]: newDate });
-    } else {
-      setExpense({ ...expense, [name]: value });
-    }
-  };
 
   const handleSubmit = async (event) => {
     console.log('called');
@@ -48,96 +39,98 @@ const ExpenseForm = ({ setExpenses }) => {
 
   const formItems = [
     {
+      label: 'Title',
       component: (
-        <TextField
-          margin='normal'
-          required
-          fullWidth
-          name='title'
-          type='text'
-          inputProps={{
-            style: {
-              height: '24px',
-              padding: 0,
-              textAlign: 'center',
-            },
-          }}
-        />
+        <>
+          <label htmlFor='title'>Title</label>
+          <TextField
+            required
+            fullWidth
+            name='title'
+            type='text'
+            inputProps={{
+              style: {
+                height: '24px',
+                padding: 0,
+                textAlign: 'center',
+                marginTop: 0,
+              },
+            }}
+          />
+        </>
       ),
     },
     {
+      label: 'Cost',
       component: (
-        <TextField
-          margin='normal'
-          padding='0'
-          required
-          fullWidth
-          name='cost'
-          type='text'
-          inputProps={{
-            style: {
-              height: '24px',
-              padding: 0,
-              textAlign: 'center',
-            },
-          }}
-        />
+        <>
+          <label htmlFor='cost'>Cost</label>
+          <TextField
+            padding='0'
+            required
+            fullWidth
+            name='cost'
+            type='text'
+            inputProps={{
+              style: {
+                height: '24px',
+                padding: 0,
+                textAlign: 'center',
+              },
+            }}
+          />
+        </>
       ),
     },
     {
+      label: 'Date',
       component: (
-        <TextField
-          margin='normal'
-          required
-          fullWidth
-          name='date'
-          type='date'
-          inputProps={{
-            style: {
-              height: '24px',
-              padding: 0,
-              textAlign: 'center',
-            },
-          }}
-        />
+        <>
+          <label htmlFor='date'>Date</label>
+          <TextField
+            required
+            fullWidth
+            name='date'
+            type='date'
+            inputProps={{
+              style: {
+                height: '24px',
+                padding: 0,
+                textAlign: 'center',
+              },
+            }}
+          />
+        </>
       ),
     },
-
     {
+      label: '',
       component: (
-        // <Button
-        //   type='submit'
-        //   fullWidth
-        //   flex='1'
-        //   style={{
-        //     height: '24px',
-        //     marginTop: '7px',
-        //     flex: '1',
-        //     minWidth: 'auto',
-        //     maxWidth: '100%',
-        //   }}
-        //   variant='contained'
-        // >
-        <Button
-          name='submit'
-          fullWidth
-          variant='contained'
-          sx={{
-            height: '24px',
-            marginTop: '7px',
-            minWidth: 'auto',
-            maxWidth: '100%',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
-            // maxWidth: '100px',
-          }}
-        >
-          submit
-        </Button>
+        <>
+          <label htmlFor='submit' style={{ display: 'none' }}>
+            Submit
+          </label>
+          <Button
+            type='submit'
+            fullWidth
+            variant='contained'
+            sx={{
+              height: '24px',
+              marginTop: '24px',
+              minWidth: 'auto',
+              maxWidth: '100%',
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            Submit
+          </Button>
+        </>
       ),
     },
   ];
+
   return (
     <>
       <Grid
@@ -158,5 +151,4 @@ const ExpenseForm = ({ setExpenses }) => {
     </>
   );
 };
-
 export default ExpenseForm;

@@ -3,12 +3,11 @@ import axios from 'axios';
 const BASE_URL = 'http://localhost:2001/expenses';
 
 const ExpensesApi = (route) => {
-  
   const url = `${BASE_URL}/${route}`;
 
   const get = async () => {
     try {
-      const response = await axios.get(url, {withCredentials: true});
+      const response = await axios.get(url, { withCredentials: true });
       return response.data;
     } catch (error) {
       throw error;
@@ -17,7 +16,7 @@ const ExpensesApi = (route) => {
 
   const post = async (data) => {
     try {
-      const response = await axios.post(url, data, {withCredentials: true});
+      const response = await axios.post(url, data, { withCredentials: true });
       return response.data;
     } catch (error) {
       throw error;

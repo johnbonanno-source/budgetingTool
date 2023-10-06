@@ -6,13 +6,12 @@ const BoxComponent = (props) => {
     <Box
       {...props}
       sx={{
-
         flexDirection: 'column',
         display: 'flex',
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight:  '100vh',
+        minHeight: '100vh',
         paddingTop: props.paddingTop,
         paddingBottom: props.paddingBottom,
         ...props.sx,

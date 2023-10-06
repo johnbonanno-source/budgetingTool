@@ -28,7 +28,7 @@ function Copyright(props) {
   );
 }
 
-export default function Login() {
+const Login = () => {
   const navigate = useNavigate();
   const tokenPrecheck = localStorage.getItem('accesstoken');
   useEffect(() => {
@@ -123,4 +123,6 @@ export default function Login() {
       </Container>
     </BoxComponent>
   );
-}
+};
+
+export default Login;

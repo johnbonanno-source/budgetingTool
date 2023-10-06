@@ -40,10 +40,7 @@ const Register = () => {
               name='password'
               onChange={handleChange}
             />
-            <button
-              type='submit'
-              className={classes.loginBtn}
-            >
+            <button type='submit' className={classes.loginBtn}>
               Login
             </button>
             <Link to='/login' className={classes.linkStyle}>

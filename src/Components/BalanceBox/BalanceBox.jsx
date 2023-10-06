@@ -65,7 +65,7 @@ const BalanceBox = ({ balance, setBalance }) => {
             overflow: 'hidden',
             whiteSpace: 'nowrap',
             textOverflow: 'ellipsis',
-            // maxWidth: '100px', 
+            // maxWidth: '100px',
           }}
         >
           Deposit
@@ -99,6 +99,7 @@ const BalanceBox = ({ balance, setBalance }) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          paddingBottom: '10px',
         }}
       >
         <Box

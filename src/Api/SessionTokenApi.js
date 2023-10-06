@@ -87,4 +87,9 @@ const validateSessionToken = async () => {
     console.error('Error validating session token: ', error.message);
   }
 };
-export { addLoginHandler, getSessionTokenById, addLogoutHandler, validateSessionToken };
+export {
+  addLoginHandler,
+  getSessionTokenById,
+  addLogoutHandler,
+  validateSessionToken,
+};

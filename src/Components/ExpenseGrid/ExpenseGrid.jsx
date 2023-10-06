@@ -35,7 +35,10 @@ const ExpenseGrid = ({ expenses }) => {
   }));
 
   // Calculate the total cost
-  const totalCost = expenses.reduce((total, expense) => total + expense.cost, 0);
+  const totalCost = expenses.reduce(
+    (total, expense) => total + expense.cost,
+    0
+  );
 
   // Add a row for the total cost
   rows.push({
@@ -58,6 +61,5 @@ const ExpenseGrid = ({ expenses }) => {
 };
 
 export default ExpenseGrid;
-
 
 // https://codesandbox.io/s/react-material-ui-vcjmn?file=/src/App.js

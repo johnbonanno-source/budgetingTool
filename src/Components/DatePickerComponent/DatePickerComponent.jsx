@@ -10,20 +10,20 @@ const oneYear = dayjs().add(1, 'year');
 const DatePickerComponent = (props) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DatePicker
-            onChange={props.onChange}
-            defaultValue={today}
-            maxDate={oneYear}
-            views={['year', 'month', 'day']}
-            sx={{
-              '& .MuiInputBase-root': {
-                height: '2rem',
-                backgroundColor: 'inherit', 
-              }, 
-            }}
-          />
+      <DatePicker
+        onChange={props.onChange}
+        defaultValue={today}
+        maxDate={oneYear}
+        views={['year', 'month', 'day']}
+        sx={{
+          '& .MuiInputBase-root': {
+            height: '2rem',
+            backgroundColor: 'inherit',
+          },
+        }}
+      />
     </LocalizationProvider>
   );
-}
+};
 
 export default DatePickerComponent;
