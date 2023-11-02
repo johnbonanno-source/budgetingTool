@@ -8,3 +8,4 @@ export { default as InputComponent } from './Components/InputComponent/InputComp
 export { default as BoxComponent } from './Components/BoxComponent/BoxComponent';
 export { default as ButtonComponent } from './Components/ButtonComponent/ButtonComponent';
 export { default as DatePickerComponent } from './Components/DatePickerComponent/DatePickerComponent';
+export { default as Dashboard} from './Components/Dashboard.jsx'

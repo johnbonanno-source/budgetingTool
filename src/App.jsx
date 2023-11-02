@@ -6,6 +6,7 @@ import {
   RootLayout,
   ErrorPage,
   BudgetPage,
+  Dashboard
 } from './components';
 import { validateSessionToken } from './Api/SessionTokenApi';
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       errorElement: <ErrorPage />,
       children: [
         { path: '/', element: <LandingPage /> },
+        { path: '/dashboard', element: <Dashboard/> },
         { path: '/budget', element: <BudgetPage /> },
         { path: '/login', element: <Login /> },
       ],

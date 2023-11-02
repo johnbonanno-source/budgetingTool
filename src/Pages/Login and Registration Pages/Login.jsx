@@ -77,7 +77,7 @@ const Login = () => {
               required
               fullWidth
               id='username'
-              label='Username'
+              label='Username: john'
               name='username'
               autoComplete='Username'
               autoFocus
@@ -87,7 +87,7 @@ const Login = () => {
               required
               fullWidth
               name='password'
-              label='Password'
+              label='Password:  floyd'
               type='password'
               id='password'
               autoComplete='current-password'

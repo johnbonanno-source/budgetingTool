@@ -57,6 +57,8 @@ const NavBar = () => {
         <ButtonGroup variant='contained' aria-label='navbar button group'>
           <Button href='./'>Home</Button>
           <Button href='./budget'>Budget</Button>
+          <Button href='./dashboard'>Dashboard</Button>
+
           <Button
             href={isLoggedIn ? '/' : '/login'}
             onClick={isLoggedIn ? () => handleLogout() : null}

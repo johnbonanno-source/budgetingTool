@@ -34,13 +34,11 @@ const ExpenseGrid = ({ expenses }) => {
     key: expense._id,
   }));
 
-  // Calculate the total cost
   const totalCost = expenses.reduce(
     (total, expense) => total + expense.cost,
     0
   );
 
-  // Add a row for the total cost
   rows.push({
     id: 'total',
     title: 'Total Spending:',
